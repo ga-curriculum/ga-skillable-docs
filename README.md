@@ -14,5 +14,3 @@ The whole site is one self-contained file, `index.html`. Fonts, logos and images
 Each guide is plain Markdown inside `index.html`. Search the file for `DOC 02` (or any guide number), edit the text in that block, and commit. GitHub Pages republishes automatically.
 
 Full instructions, including the formatting conventions and how to add a new guide, are on the site's **Updating this site** page.
-
-Maintained by Lauren Perez, Lab Platform Admin (lauren.perez@generalassemb.ly).

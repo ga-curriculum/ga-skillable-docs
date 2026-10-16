@@ -15,4 +15,7 @@ Each guide is plain Markdown inside `index.html`. Search the file for `DOC 02` (
 
 Full instructions, including the formatting conventions and how to add a new guide, are on the site's **Updating this site** page.
 
-Maintained by Lauren Perez, Lab Platform Admin (lauren.perez@generalassemb.ly).
+Maintained by 
+
+Lauren Perez, lauren.perez@helloga.com
+Madi Coates, madi.coates@helloga.com

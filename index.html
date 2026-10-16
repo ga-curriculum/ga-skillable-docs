@@ -25,7 +25,7 @@
   },
   "admin": {
     "name": "Lauren Perez",
-    "role": "Lab Platform Admin",
+    "role": "Lab Admin",
     "email": "lauren.perez@generalassemb.ly"
   },
   "nav": [
@@ -469,7 +469,7 @@ dek: Fourteen guides for the LEDs, SMEs, instructors, CSMs and program ops who d
 ## The four things everyone should know
 
 1. **Skillable is two products.** *Skillable Studio* is where labs are built: the "guts" of each lab. *Skillable TMS* is where classes, students and instructors live. Students only ever see TMS and the lab window.
-2. **Only the Lab Platform Admin has Studio access.** Studio licenses are limited and held only by the Lab Platform Admin. Nobody else on the team needs Studio. If something has to change there, contact the Lab Platform Admin.
+2. **Only the Lab Admin has Studio access.** Studio licenses are limited and held only by the Lab Admin. Nobody else on the team needs Studio. If something has to change there, contact the Lab Admin.
 3. **Lab machines are disposable by default.** A lab is a fresh copy of a saved image every time it launches. Anything a student doesn't push to GitHub (or save inside the lab, where saving is enabled) can be lost.
 4. **GA builds its own environments.** Unlike a catalog product, we design and maintain the VM images, lab instructions and settings ourselves. That means requests for changes go to GA first, not Skillable.
 
@@ -519,7 +519,7 @@ Our programs teach people to build real things with real tools. That only works 
 Skillable gives us more control, and with that comes more responsibility:
 
 - **Lab machines are disposable by default.** Learners need to push their work to GitHub. We teach this from day one.
-- **GA owns the lab environment.** If a tool is missing or a lab misbehaves, it's usually ours to fix. The Lab Platform Admin handles that.
+- **GA owns the lab environment.** If a tool is missing or a lab misbehaves, it's usually ours to fix. The Lab Admin handles that.
 - **Setup takes lead time.** Rosters, lab builds and testing happen before day one. See the launch checklist (doc 12).
 
 ## Where to go next
@@ -545,7 +545,7 @@ meta.Audience: everyone. One page to answer "who do I ask?"
 
 | Role | In one line | Works in |
 |---|---|---|
-| **Lab Platform Admin** | Manages the Skillable relationship and builds the lab environments | Skillable Studio, TMS |
+| **Lab Admin** | Manages the Skillable relationship and builds the lab environments | Skillable Studio, TMS |
 | **CSM** | Owns the client relationship, enrollment and reporting | TMS (Operations Manager role) |
 | **Instructor / TA** | Delivers sessions and helps learners in their labs | TMS (Instructor role) |
 | **LED** | Designs the learning experience and writes lab instructions | Markdown, outside Skillable |
@@ -553,45 +553,45 @@ meta.Audience: everyone. One page to answer "who do I ask?"
 | **Skillable support** | Fixes platform issues; 24/7 | Skillable |
 | **Learner** | Does the work and pushes it to GitHub | TMS, lab window |
 
-The current Lab Platform Admin and their contact details are on the [home page](#/).
+The current Lab Admin and their contact details are on the [home page](#/).
 
 ## Rules of thumb
 
 <!-- cards: LuSettings, LuUsers, LuPencilRuler, LuMoon -->
-- **Anything inside Skillable Studio** goes to the Lab Platform Admin.
+- **Anything inside Skillable Studio** goes to the Lab Admin.
 - **Anything about who's enrolled** goes to the CSM.
-- **Anything wrong in the lab instructions** goes to the LED or SME, who sends the fix to the Lab Platform Admin.
-- **After hours,** don't wait. File a Skillable support ticket and send the ticket number to the Lab Platform Admin.
+- **Anything wrong in the lab instructions** goes to the LED or SME, who sends the fix to the Lab Admin.
+- **After hours,** don't wait. File a Skillable support ticket and send the ticket number to the Lab Admin.
 
 ## Who owns what
 
 | Area | Owner | Supports |
 |---|---|---|
 | **Before launch** | | |
-| Lab visibility, scoring and post-class access decisions | CSM, LED (with the client) | Lab Platform Admin |
+| Lab visibility, scoring and post-class access decisions | CSM, LED (with the client) | Lab Admin |
 | Learner roster from the client | CSM | |
-| Roster CSV upload and enrollment | CSM | Lab Platform Admin |
+| Roster CSV upload and enrollment | CSM | Lab Admin |
 | Welcome emails and tech check follow-up | CSM | |
-| Instructor and CSM TMS accounts | Lab Platform Admin | |
+| Instructor and CSM TMS accounts | Lab Admin | |
 | **Lab content** | | |
 | Lab instructions (Markdown) | LED | SME |
 | Tool and package list for the VM | SME | LED |
-| Building the VM image | Lab Platform Admin | SME |
-| Loading instructions, building activities, publishing labs | Lab Platform Admin | |
+| Building the VM image | Lab Admin | SME |
+| Loading instructions, building activities, publishing labs | Lab Admin | |
 | Reviewing labs in a real launch | LED, SME | Instructors |
-| Lab settings (duration, timeouts, saving, visibility) | Lab Platform Admin | |
+| Lab settings (duration, timeouts, saving, visibility) | Lab Admin | |
 | **During delivery** | | |
 | Running sessions and monitoring labs | Instructor | |
 | Helping a learner in their lab | Instructor | |
 | Last-minute learner adds | CSM | |
 | Missing learner or sign-in problems | CSM | |
-| Broken tool or VM | Lab Platform Admin | |
-| Lab instruction errors | LED / SME (drafts the fix) | Lab Platform Admin (applies it) |
-| Platform outage during the Lab Platform Admin's hours | Lab Platform Admin | Skillable support |
+| Broken tool or VM | Lab Admin | |
+| Lab instruction errors | LED / SME (drafts the fix) | Lab Admin (applies it) |
+| Platform outage during the Lab Admin's hours | Lab Admin | Skillable support |
 | Platform issue after hours or in another time zone | Instructor or CSM files the ticket | Skillable support |
 | **Reporting and wrap-up** | | |
 | Progress, completion and score reports | CSM | |
-| Post-class access | Lab Platform Admin | CSM |
+| Post-class access | Lab Admin | CSM |
 | Lessons learned for the next cohort | All | |
 </script>
 
@@ -610,8 +610,8 @@ fingerprint: loop
 
 | Term | Meaning |
 |---|---|
-| **Skillable Studio** | Where labs are built: VM images, settings, instructions, activities. Lab Platform Admin only |
-| **Lab Platform Admin** | The GA role that manages Skillable and architects our lab environments. Contact for anything about the lab environment or Studio |
+| **Skillable Studio** | Where labs are built: VM images, settings, instructions, activities. Lab Admin only |
+| **Lab Admin** | The GA role that manages Skillable and architects our lab environments. Contact for anything about the lab environment or Studio |
 | **Skillable TMS** | Training Management System. Users, classes, enrollments, monitoring, reports |
 | **Lab Profile** | A single lab in Studio: its VMs, settings and instructions |
 | **Lab Series** | A group of lab profiles. A profile must be in a series to be published |
@@ -655,7 +655,7 @@ No. The instance is gone. Re-clone from GitHub.
 Only if saving is turned on for that lab. If the Exit menu only shows *End*, it can't be saved.
 
 **Who do I contact?**
-GA first: the program's CSM for access, the Lab Platform Admin for anything about the lab environment. Outside the Lab Platform Admin's hours (for example, UK daytime deliveries), open a ticket with Skillable support directly at https://www.skillable.com/customer-support/. Support runs 24/7.
+GA first: the program's CSM for access, the Lab Admin for anything about the lab environment. Outside the Lab Admin's hours (for example, UK daytime deliveries), open a ticket with Skillable support directly at https://www.skillable.com/customer-support/. Support runs 24/7.
 
 **Where's Skillable's own documentation?**
 https://docs.skillable.com · Platform status: https://status.skillable.com
@@ -692,9 +692,9 @@ meta.Format: Web version of the slide deck; presenter notes included
 |---|---|---|
 | What it is | The lab **workshop** | The **classroom** |
 | What happens there | VM images, lab settings, instructions, activities and scoring are built | Users, classes, enrollments, monitoring and reporting |
-| Who uses it at GA | The Lab Platform Admin only | Instructors, ops, CSMs, students |
+| Who uses it at GA | The Lab Admin only | Instructors, ops, CSMs, students |
 
-**Instructors live in TMS.** You'll never need Studio. If something needs changing there, contact the Lab Platform Admin.
+**Instructors live in TMS.** You'll never need Studio. If something needs changing there, contact the Lab Admin.
 
 ---
 
@@ -721,7 +721,7 @@ meta.Format: Web version of the slide deck; presenter notes included
 - **Student:** takes classes and launches labs
 - **Lab Report Viewer:** reports on progress, completions and scores (CSMs, where granted)
 
-> **Speaker notes:** Your access depends on your role. If you can't see something on these slides, ask the Lab Platform Admin to check your role.
+> **Speaker notes:** Your access depends on your role. If you can't see something on these slides, ask the Lab Admin to check your role.
 
 ---
 
@@ -748,7 +748,7 @@ meta.Format: Web version of the slide deck; presenter notes included
 - Walk the setup steps, run the tooling, check timeouts
 - Instructors can hold up to **5 saved labs** (7-day save) for demos and prep
 
-**Remember:** your test lab is ephemeral too. Changes you make don't reach learners. Report image problems to the Lab Platform Admin.
+**Remember:** your test lab is ephemeral too. Changes you make don't reach learners. Report image problems to the Lab Admin.
 
 ---
 
@@ -807,19 +807,19 @@ From the Class page, select **Monitor Labs**. A new tab lists every running lab 
 | Issue | Contact |
 |---|---|
 | Learner can't sign in / not on roster | The program's **CSM** |
-| Tool missing, VM broken, lab settings | **Lab Platform Admin** |
-| Lab instruction errors | The LED / SME for that course, who sends the fix to the Lab Platform Admin to apply |
-| Whole platform down | Check https://status.skillable.com, then tell the Lab Platform Admin |
-| Any lab issue outside the Lab Platform Admin's hours (e.g., UK daytime deliveries) | **Skillable support directly** (next slide) |
-| Urgent during live class | The program's **CSM**, who escalates to the Lab Platform Admin if needed |
+| Tool missing, VM broken, lab settings | **Lab Admin** |
+| Lab instruction errors | The LED / SME for that course, who sends the fix to the Lab Admin to apply |
+| Whole platform down | Check https://status.skillable.com, then tell the Lab Admin |
+| Any lab issue outside the Lab Admin's hours (e.g., UK daytime deliveries) | **Skillable support directly** (next slide) |
+| Urgent during live class | The program's **CSM**, who escalates to the Lab Admin if needed |
 
-During the Lab Platform Admin's working hours, route issues through GA so there's one thread and one record.
+During the Lab Admin's working hours, route issues through GA so there's one thread and one record.
 
 ---
 
 ## Slide 12b: Contacting Skillable Support
 
-**Use this after hours or when your delivery runs outside the Lab Platform Admin's time zone.**
+**Use this after hours or when your delivery runs outside the Lab Admin's time zone.**
 
 - Go to https://www.skillable.com/customer-support/ and select **Open a support ticket**
 - Support runs **24/7**, and GA has Skillable's **premium support tier**, so our tickets are picked up right away
@@ -832,7 +832,7 @@ During the Lab Platform Admin's working hours, route issues through GA so there'
 - What you expected vs. what happened, with screenshots
 - Constant or intermittent, and what you've already tried
 
-> **Speaker notes:** Afterwards, send the ticket number to the Lab Platform Admin so it can be followed up during GA hours.
+> **Speaker notes:** Afterwards, send the ticket number to the Lab Admin so it can be followed up during GA hours.
 
 ---
 
@@ -963,13 +963,13 @@ Step-by-step clicks are in doc 04.
 
 | Problem | Owner |
 |---|---|
-| Tool missing from the VM, wrong version, broken image | Lab Platform Admin |
-| Lab settings (duration, save, timeouts, visibility) | Lab Platform Admin |
+| Tool missing from the VM, wrong version, broken image | Lab Admin |
+| Lab settings (duration, save, timeouts, visibility) | Lab Admin |
 | Student can't sign in / not in class | The program's CSM |
-| Lab instructions wrong or unclear | LED / SME drafts the fix; the Lab Platform Admin applies it in Studio |
+| Lab instructions wrong or unclear | LED / SME drafts the fix; the Lab Admin applies it in Studio |
 | Skillable platform outage | Skillable support (see section 8) |
 
-**When to contact Skillable directly.** During the Lab Platform Admin's working hours, route issues through GA so we keep one thread and one record. **Outside those hours, or for deliveries in other time zones (for example, UK daytime), contact Skillable support directly** using the steps in section 8. GA has Skillable's premium support tier, so our tickets are picked up right away.
+**When to contact Skillable directly.** During the Lab Admin's working hours, route issues through GA so we keep one thread and one record. **Outside those hours, or for deliveries in other time zones (for example, UK daytime), contact Skillable support directly** using the steps in section 8. GA has Skillable's premium support tier, so our tickets are picked up right away.
 
 ## 8. Escalating to Skillable
 
@@ -984,7 +984,7 @@ Go to https://www.skillable.com/customer-support/ and select **Open a support ti
 - Whether it's constant or intermittent, and what you've already tried
 - For performance issues: learner location, VPN or proxy use, data center (from the Help panel) and connection test results
 
-**After you file:** let the Lab Platform Admin know the ticket number so it can be followed up during GA hours.
+**After you file:** let the Lab Admin know the ticket number so it can be followed up during GA hours.
 
 **Sources:** Skillable docs on managing labs in TMS, lab save time, the Exit menu, and assisting students (docs.skillable.com).
 </script>
@@ -1033,7 +1033,7 @@ Work down this list. Stop as soon as it's fixed.
 ### Lab won't launch
 - **Pop-ups blocked:** the lab opens in a new window. Allow pop-ups for generalassembly.learnondemand.net
 - **Corporate network or VPN:** ask them to run https://www.skillable.com/customer-support/speed-test/. If it fails, try a different network or turn off the VPN if their employer allows it
-- **Launch limit reached:** contact the Lab Platform Admin
+- **Launch limit reached:** contact the Lab Admin
 
 ### Lab is slow or laggy
 - One learner: their network. Try a wired connection, close other tabs, turn off VPN if allowed
@@ -1058,10 +1058,10 @@ Work down this list. Stop as soon as it's fixed.
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | `git push` asks for credentials or fails | Not signed in to GitHub on this machine | `gh auth login` |
-| A Python package is missing | Not in the base image, or added on a previous fresh machine | `pip install` it, and tell the Lab Platform Admin if every learner needs it |
-| A tool is missing or the wrong version for everyone | Base image issue | Lab Platform Admin. Don't have learners install workarounds unless told to |
-| `claude` asks to sign in instead of offering the preset key | API key not present in this session | Open a new terminal and try again. If it persists, relaunch the lab, then contact the Lab Platform Admin |
-| Claude Code stops with a usage or limit error | The program's API usage limit has been reached | Contact the Lab Platform Admin |
+| A Python package is missing | Not in the base image, or added on a previous fresh machine | `pip install` it, and tell the Lab Admin if every learner needs it |
+| A tool is missing or the wrong version for everyone | Base image issue | Lab Admin. Don't have learners install workarounds unless told to |
+| `claude` asks to sign in instead of offering the preset key | API key not present in this session | Open a new terminal and try again. If it persists, relaunch the lab, then contact the Lab Admin |
+| Claude Code stops with a usage or limit error | The program's API usage limit has been reached | Contact the Lab Admin |
 
 ## 5. Helping a learner directly
 
@@ -1076,8 +1076,8 @@ From your Class page, open **Monitor Labs**, find the learner, then **Monitor St
 | Situation | Who |
 |---|---|
 | Access, enrollment, missing learner | Program's CSM |
-| Missing tool, broken image, lab settings, API limit | Lab Platform Admin |
-| Platform issue during the Lab Platform Admin's hours | Lab Platform Admin |
+| Missing tool, broken image, lab settings, API limit | Lab Admin |
+| Platform issue during the Lab Admin's hours | Lab Admin |
 | Platform issue after hours or in another time zone | Skillable support directly (doc 02, section 8) |
 | Lab instruction errors | LED / SME for the course |
 
@@ -1272,18 +1272,18 @@ background: black
 fingerprint: loop
 meta.Audience: LEDs and SMEs writing or reviewing lab instructions
 meta.Scope: instruction Markdown, Skillable's special syntax, activities and scoring, and authoring best practice
-meta.Not covered: anything inside Skillable Studio (that's the Lab Platform Admin's side)
+meta.Not covered: anything inside Skillable Studio (that's the Lab Admin's side)
 ---
 
 ## 1. How lab content gets into Skillable
 
 - Labs are built in **Skillable Studio**, where the "guts" of each lab live: VM images, settings, instructions and activities.
-- **Studio access sits with the Lab Platform Admin**, who architects our labs. Everything LEDs and SMEs do happens outside Studio, so there's no Studio login to set up or learn.
+- **Studio access sits with the Lab Admin**, who architects our labs. Everything LEDs and SMEs do happens outside Studio, so there's no Studio login to set up or learn.
 - **Your job:** write the lab instructions in **Markdown** (CommonMark) using the Skillable syntax in this guide, and specify any checks, questions or scoring you want.
-- **The Lab Platform Admin's job:** load your instructions into Studio, build the activities, and publish the lab.
-- **Any change that needs Studio goes to the Lab Platform Admin.** That includes edits to a live lab, new tools on the VM, timeouts and scoring.
+- **The Lab Admin's job:** load your instructions into Studio, build the activities, and publish the lab.
+- **Any change that needs Studio goes to the Lab Admin.** That includes edits to a live lab, new tools on the VM, timeouts and scoring.
 
-**Previewing your work.** Skillable's custom syntax won't render in GitHub or VS Code previews; it only renders inside a lab. Do your final review in a real lab launch once the Lab Platform Admin has loaded it.
+**Previewing your work.** Skillable's custom syntax won't render in GitHub or VS Code previews; it only renders inside a lab. Do your final review in a real lab launch once the Lab Admin has loaded it.
 
 ## 2. Markdown reference
 
@@ -1316,7 +1316,7 @@ The sections below highlight the syntax we use most in GA labs.
 **When to use what**
 - **Type text** for commands learners are meant to run but not memorize (paths, long URLs, setup lines).
 - **Plain code blocks** for code they should *read and write themselves*. If everything is click-to-type, they learn to click, not to code.
-- **Background commands** sparingly: opening a deep folder, launching an app. They need integration services on the VM; check with the Lab Platform Admin before relying on them.
+- **Background commands** sparingly: opening a deep folder, launching an app. They need integration services on the VM; check with the Lab Admin before relying on them.
 
 ## 5. Callout blocks
 
@@ -1380,7 +1380,7 @@ Tokens are filled in when the learner launches the lab.
 
 ## 8. Activities: checks, questions and scoring
 
-Activities are built in Studio by the Lab Platform Admin and dropped into the instructions as a token, e.g., `@lab.Activity(Question1)`. **In your draft, describe each activity you want:** what it checks, the question and answers, point value, and the feedback for right and wrong answers. Use the options below as your menu.
+Activities are built in Studio by the Lab Admin and dropped into the instructions as a token, e.g., `@lab.Activity(Question1)`. **In your draft, describe each activity you want:** what it checks, the question and answers, point value, and the feedback for right and wrong answers. Use the options below as your menu.
 
 ### Questions
 - Multiple choice (single or multiple answer)
@@ -1414,7 +1414,7 @@ If the lab should be scored, include these decisions in your draft:
 - **Outcomes** can branch the lab: e.g. a wrong answer sends the learner to a review page
 
 ### Example: a check you might ask for (Bash)
-You can describe a check in plain language, or include a script like this one if you have it. The Lab Platform Admin will adapt it.
+You can describe a check in plain language, or include a script like this one if you have it. The Lab Admin will adapt it.
 ```bash
 cd ~/project 2>/dev/null || { echo "Project folder not found"; echo false; exit; }
 if git status -sb | grep -q "ahead"; then
@@ -1425,7 +1425,7 @@ else
   echo true
 fi
 ```
-*Adapt for Windows/PowerShell on the MTA image. Check the VM type with the Lab Platform Admin.*
+*Adapt for Windows/PowerShell on the MTA image. Check the VM type with the Lab Admin.*
 
 ## 9. Authoring checklist
 
@@ -1436,8 +1436,8 @@ fi
 - [ ] Every activity has specific feedback for wrong answers
 - [ ] Lab instance ID visible in a footer
 - [ ] Each activity specified: what it checks, points, feedback
-- [ ] Reviewed end to end in a **real lab launch** after the Lab Platform Admin loads it
-- [ ] Any new tool, package or Studio change flagged to the Lab Platform Admin
+- [ ] Reviewed end to end in a **real lab launch** after the Lab Admin loads it
+- [ ] Any new tool, package or Studio change flagged to the Lab Admin
 
 **Sources:** Skillable docs on creating instructions with Markdown, managing instructions outside Studio, automating activities, and scoring (docs.skillable.com).
 </script>
@@ -1448,7 +1448,7 @@ fi
 title: Requesting a lab [change]
 nav: Requesting a lab change
 kicker: Process
-dek: Every change to a lab is made in Skillable Studio by the Lab Platform Admin. A clear request with enough notice gets done right the first time.
+dek: Every change to a lab is made in Skillable Studio by the Lab Admin. A clear request with enough notice gets done right the first time.
 background: black
 fingerprint: whorl
 meta.Audience: LEDs, SMEs, instructors and CSMs
@@ -1456,7 +1456,7 @@ meta.Audience: LEDs, SMEs, instructors and CSMs
 
 ## How to request a change
 
-Email the Lab Platform Admin (contact details on the [home page](#/)) with:
+Email the Lab Admin (contact details on the [home page](#/)) with:
 
 1. **Program and lab name.** Which lab, and which week or Friday it's used
 2. **What should change.** Be specific: the exact text, step, tool or setting
@@ -1477,7 +1477,7 @@ For instruction changes, send the **updated Markdown** rather than a description
 | **New tool or package on the VM** | A Python library, CLI tool or VS Code extension | 7 business days |
 | **New lab** | A new Friday lab built on the existing image | 14 calendar days |
 | **New VM image** | A different operating system or a major toolset change | 4 weeks |
-| **New cloud platform inside labs** | Live Azure, AWS or GCP environments | Talk to the Lab Platform Admin as early as possible. This can take several weeks |
+| **New cloud platform inside labs** | Live Azure, AWS or GCP environments | Talk to the Lab Admin as early as possible. This can take several weeks |
 
 Urgent fixes during a live class are handled as soon as possible. Anything that breaks a live session goes through the troubleshooting guide (doc 11) first.
 
@@ -1491,7 +1491,7 @@ How a change reaches learners depends on how the lab behaves:
 
 ## What not to do
 
-- **Don't ask learners to install workarounds** for a missing tool without checking with the Lab Platform Admin. The next fresh machine won't have it, and it may hide a problem every learner will hit.
+- **Don't ask learners to install workarounds** for a missing tool without checking with the Lab Admin. The next fresh machine won't have it, and it may hide a problem every learner will hit.
 - **Don't edit instructions in a test lab and expect them to stick.** Test sessions are disposable too.
 - **Don't contact Skillable to change a lab.** Lab content and settings are GA's; Skillable support is for platform issues.
 </script>
@@ -1529,7 +1529,7 @@ TMS also tracks **progress** within a lab, based on how many task check boxes th
 4. **Save the search** as a default view so weekly reporting is one click
 5. Select **Details** on a completed lab to see question-by-question results
 
-**Access:** CSMs are expected to have the **Operations Manager** role, which also lets you enroll last-minute learners and connect them to classes. If you can't see the Labs tile for reporting, ask the Lab Platform Admin to update your role.
+**Access:** CSMs are expected to have the **Operations Manager** role, which also lets you enroll last-minute learners and connect them to classes. If you can't see the Labs tile for reporting, ask the Lab Admin to update your role.
 
 ## 2. Useful weekly signals for client updates
 
@@ -1546,7 +1546,7 @@ TMS also tracks **progress** within a lab, based on how many task check boxes th
 ## 3. How grading works (so you can explain it)
 
 - Grading in Skillable is built from **activities** inside the lab: questions (multiple choice, short answer) and **automated checks** that inspect the learner's environment
-- The LED specifies which activities count, their point values and the **passing score**; the Lab Platform Admin configures them in Studio
+- The LED specifies which activities count, their point values and the **passing score**; the Lab Admin configures them in Studio
 - Checks can award **partial credit**
 - Learners may see nothing, their score only, or a full breakdown, depending on how the lab is set
 - Labs can be **practice** (unscored, retries allowed) or **assessment** (scored, sometimes only on submission)
@@ -1563,7 +1563,7 @@ TMS also tracks **progress** within a lab, based on how many task check boxes th
 - Learners weren't sure their account had been created, so they made a second one with a different email, taking up two roster spots
 
 **GA enrollment by CSV upload (our preferred method for now).** We fill in a roster CSV ahead of time and upload it to TMS, which creates the accounts and enrolls everyone in the right class.
-- The roster has a **fixed format**. Ask the Lab Platform Admin for the roster template file, and don't add, rename or reorder columns
+- The roster has a **fixed format**. Ask the Lab Admin for the roster template file, and don't add, rename or reorder columns
 - Collect each learner's first name, last name and email from the client well before day one
 - Learners receive their email as username plus a temporary password, and set a new password on first login
 - **Last-minute adds:** CSMs with the Operations Manager role can enroll individual learners and connect them to the class
@@ -1572,7 +1572,7 @@ TMS also tracks **progress** within a lab, based on how many task check boxes th
 
 - Each learner account needs a **unique email**
 - Learners can access class labs from class start through any **post-class access period** set for the course. This is decided per program, and GA controls it precisely: for example, 10 extra hours after the course ends for a capstone or practice
-- **Keep cost in mind:** Skillable charges GA a flat hourly rate for lab time, so every extra hour of access has a cost. Check with the Lab Platform Admin before offering extra lab time to a client
+- **Keep cost in mind:** Skillable charges GA a flat hourly rate for lab time, so every extra hour of access has a cost. Check with the Lab Admin before offering extra lab time to a client
 - Labs run in the browser; corporate networks must allow the Skillable site and pop-ups. The tech check catches this before day one
 
 ## 5. When something goes wrong
@@ -1584,14 +1584,14 @@ TMS also tracks **progress** within a lab, based on how many task check boxes th
 | Can't sign in | Wrong email, not enrolled, password | CSM (check enrollment) |
 | Class not visible | Enrollment status or class not started | CSM (check enrollment) |
 | Lab won't launch for one person | Network / browser / pop-ups | Instructor → tech check |
-| Lab won't launch for everyone | Platform issue | Check status.skillable.com → Lab Platform Admin |
-| Tool missing or broken on VM | Image issue | Lab Platform Admin |
+| Lab won't launch for everyone | Platform issue | Check status.skillable.com → Lab Admin |
+| Tool missing or broken on VM | Image issue | Lab Admin |
 | Learner lost work | Exited without pushing / canceled | Instructor; re-clone from GitHub |
 
 **Client messaging principles**
 - Lead with what we're doing and when the learner will be back working
 - Lost-work incidents: own the gap in onboarding, then point to the push-to-GitHub routine as the fix going forward
-- Platform outages: during the Lab Platform Admin's hours, route through GA. After hours or for deliveries in other time zones, instructors and CSMs open a ticket with Skillable support directly (see the instructor guide, section 8). GA has Skillable's premium support tier, so tickets are picked up right away
+- Platform outages: during the Lab Admin's hours, route through GA. After hours or for deliveries in other time zones, instructors and CSMs open a ticket with Skillable support directly (see the instructor guide, section 8). GA has Skillable's premium support tier, so tickets are picked up right away
 </script>
 
 <!-- ═══════════ DOC 10: Learner welcome email ═══════════ -->
@@ -1755,9 +1755,9 @@ meta.How to read the timing: "Day 1" is the first day of delivery. "Day 1 − 21
 |---|---|---|
 | Decide lab visibility: current lab only, all labs, or current plus past | CSM with the McKinsey team | ☐ |
 | Decide whether any labs are scored, and the passing score for each | LED with the McKinsey team | ☐ |
-| Decide post-class lab access (extra hours after the program ends, if any) | CSM, with the Lab Platform Admin | ☐ |
-| Request any non-default lab settings (lab duration, idle timeout, closed-window timeout) | Delivery team → Lab Platform Admin | ☐ |
-| Confirm which tools and packages learners need on the VM | SME → Lab Platform Admin | ☐ |
+| Decide post-class lab access (extra hours after the program ends, if any) | CSM, with the Lab Admin | ☐ |
+| Request any non-default lab settings (lab duration, idle timeout, closed-window timeout) | Delivery team → Lab Admin | ☐ |
+| Confirm which tools and packages learners need on the VM | SME → Lab Admin | ☐ |
 
 Anything not requested by this point runs on Skillable's defaults: 15-minute idle timeout, 60-minute closed-window timeout.
 
@@ -1766,24 +1766,24 @@ Anything not requested by this point runs on Skillable's defaults: 15-minute idl
 | Task | Owner | Done |
 |---|---|---|
 | Request the learner roster from McKinsey: first name, last name, email for every learner | CSM | ☐ |
-| Final lab instructions for weeks 1–2 delivered in Markdown, with activities specified | LED / SME → Lab Platform Admin | ☐ |
-| TMS accounts and roles set up for instructors (Instructor) and CSMs (Operations Manager) | Lab Platform Admin | ☐ |
+| Final lab instructions for weeks 1–2 delivered in Markdown, with activities specified | LED / SME → Lab Admin | ☐ |
+| TMS accounts and roles set up for instructors (Instructor) and CSMs (Operations Manager) | Lab Admin | ☐ |
 | Instructors and CSMs sign in to TMS and confirm they can see the class | Instructors, CSM | ☐ |
 
 ## Day 1 − 14: build and review
 
 | Task | Owner | Done |
 |---|---|---|
-| Weeks 1–2 lab loaded, configured as a saveable lab, and published | Lab Platform Admin | ☐ |
+| Weeks 1–2 lab loaded, configured as a saveable lab, and published | Lab Admin | ☐ |
 | LEDs and SMEs review the lab end to end in a real lab launch | LED / SME | ☐ |
-| Fixes from the review sent to the Lab Platform Admin | LED / SME | ☐ |
+| Fixes from the review sent to the Lab Admin | LED / SME | ☐ |
 | Roster CSV filled in using the GA template | CSM | ☐ |
 
 ## Day 1 − 10: learners get access
 
 | Task | Owner | Done |
 |---|---|---|
-| Roster CSV uploaded; learners enrolled in the class | CSM / Lab Platform Admin | ☐ |
+| Roster CSV uploaded; learners enrolled in the class | CSM / Lab Admin | ☐ |
 | Welcome email (doc 10) and quick-start guide (doc 09) sent to every learner | CSM | ☐ |
 | Each instructor launches the lab, runs the full setup including `claude`, and practices Save and Close / relaunch | Instructors | ☐ |
 
@@ -1818,8 +1818,8 @@ Anything not requested by this point runs on Skillable's defaults: 15-minute idl
 | Task | Owner | Done |
 |---|---|---|
 | Every day: end-of-day push and Save and Close reminder | Instructors | ☐ |
-| First Friday lab's instructions delivered (at least 14 days before that Friday) | LED / SME → Lab Platform Admin | ☐ |
-| First Friday lab loaded and reviewed (at least 7 days before that Friday) | Lab Platform Admin, LED / SME | ☐ |
+| First Friday lab's instructions delivered (at least 14 days before that Friday) | LED / SME → Lab Admin | ☐ |
+| First Friday lab loaded and reviewed (at least 7 days before that Friday) | Lab Admin, LED / SME | ☐ |
 | Last day of week 2: confirm every learner's repository is up to date on GitHub | Instructors | ☐ |
 | Last day of week 2: walk through the Friday routine | Instructors | ☐ |
 
@@ -1827,8 +1827,8 @@ Anything not requested by this point runs on Skillable's defaults: 15-minute idl
 
 | When | Task | Owner | Done |
 |---|---|---|---|
-| 14 days before | That Friday's lab instructions delivered | LED / SME → Lab Platform Admin | ☐ |
-| 7 days before | Lab loaded, published and reviewed | Lab Platform Admin, LED / SME | ☐ |
+| 14 days before | That Friday's lab instructions delivered | LED / SME → Lab Admin | ☐ |
+| 7 days before | Lab loaded, published and reviewed | Lab Admin, LED / SME | ☐ |
 | 2 days before | Instructor test launch | Instructors | ☐ |
 | 1 day before | Reminder to learners about which lab to launch | CSM | ☐ |
 | On the day | Start-of-day setup routine on screen; end-of-day push reminder 15 minutes before close | Instructors | ☐ |
@@ -1837,9 +1837,9 @@ Anything not requested by this point runs on Skillable's defaults: 15-minute idl
 
 | Task | Owner | Done |
 |---|---|---|
-| Post-class lab access applied, if agreed | Lab Platform Admin | ☐ |
+| Post-class lab access applied, if agreed | Lab Admin | ☐ |
 | Final completion and progress report pulled from TMS | CSM | ☐ |
-| Lessons learned shared with the Lab Platform Admin for the next cohort | All | ☐ |
+| Lessons learned shared with the Lab Admin for the next cohort | All | ☐ |
 </script>
 
 <!-- ═══════════ DOC 09: Learner quick-start ═══════════ -->
@@ -1968,7 +1968,7 @@ If you only see **End**, that lab can't be saved. Make sure you've pushed to Git
 <script type="text/markdown" id="doc-maintain">
 ---
 title: Updating this [site]
-kicker: For the Lab Platform Admin
+kicker: For the Lab Admin
 dek: Every guide lives inside this one file as plain Markdown. Edit the text, save, refresh. No build step.
 background: white
 fingerprint: whorl

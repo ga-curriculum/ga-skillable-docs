@@ -1,0 +1,51 @@
+# The legacy template store, Module 3 (Lab 3.1, Step 1).
+# Deploy it into your own namespace, unchanged:
+#   kubectl apply -f legacy.yaml -n YOUR_NAMESPACE
+#
+# The course provides the image. Like a real mainframe system, you don't get its source code: you learn how it
+# behaves by watching it. It has one replica on purpose. Don't scale it.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legacy-template-store
+  labels:
+    app: legacy-template-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: legacy-template-store
+  template:
+    metadata:
+      labels:
+        app: legacy-template-store
+    spec:
+      containers:
+        - name: legacy-template-store
+          image: europe-west2-docker.pkg.dev/ga-lloyds-sre/meme-generator-repo/legacy-template-store:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: legacy-template-store
+spec:
+  type: ClusterIP
+  selector:
+    app: legacy-template-store
+  ports:
+    - port: 80
+      targetPort: 8080

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activities, checks and scoring | Skillable at GA</title>
+<meta name="description" content="How to specify questions, automated checks and scoring for the lab admin to build.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_whorl_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Activities, checks and scoring</h1>
+    <p class="dek">How to specify questions, automated checks and scoring for the lab admin to build.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>LEDs and SMEs</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>Activities are built in Studio by the lab admin. Your job is to <strong>describe each one in your draft</strong>, where it should appear. One simple way is an HTML comment under the activity token, which learners never see:</p>
+
+<pre><code class="language-markdown">@lab.Activity(PushCheck)
+&lt;!-- ACTIVITY PushCheck: automated check. Confirms the learner's latest commit is pushed.
+     Points: 1. Correct: &quot;All commits pushed.&quot; Wrong: &quot;You have commits that aren't pushed. Run git push.&quot; --&gt;
+</code></pre>
+
+<p>For every activity, include: what it checks, the question and answers (for questions), the points, and the feedback for right and wrong answers.</p>
+
+<h2 id="questions">Questions</h2>
+
+<ul>
+<li><strong>Multiple choice:</strong> one or several correct answers.</li>
+<li><strong>Short answer:</strong> exact match or pattern (regex) match, optionally case-sensitive.</li>
+</ul>
+
+<h2 id="automated-checks">Automated checks</h2>
+
+<p>A script that <strong>checks the learner’s environment</strong>: does the file exist, is the service running, is the repository there, are all commits pushed.</p>
+
+<ul>
+<li><strong>Linux machines:</strong> Bash</li>
+<li><strong>Windows machines:</strong> PowerShell or the Windows command shell</li>
+<li><strong>Cloud subscriptions:</strong> PowerShell, Python, C# (Azure) or JavaScript (AWS)</li>
+<li>A check passes by returning true or false, or can award <strong>partial credit</strong>.</li>
+<li>A check can also show the learner a pop-up message.</li>
+</ul>
+
+<p>You can describe the check in plain language, or include a script if you have one. The lab admin will adapt it. For example, in Bash:</p>
+
+<pre><code class="language-bash">cd ~/project 2&gt;/dev/null || { echo &quot;Project folder not found&quot;; echo false; exit; }
+if git status -sb | grep -q &quot;ahead&quot;; then
+  echo &quot;You have commits that aren't pushed yet. Run git push.&quot;
+  echo false
+else
+  echo &quot;All commits pushed.&quot;
+  echo true
+fi
+</code></pre>
+
+<p>Check which operating system the lab uses with the lab admin before you write a script.</p>
+
+<h2 id="options-to-ask-for">Options to ask for</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Ask for it when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>On-demand evaluation</strong></td>
+<td>Learners select a button to check their work. The default for teaching labs</td>
+</tr>
+<tr>
+<td><strong>Allow retries</strong></td>
+<td>It’s practice, not assessment</td>
+</tr>
+<tr>
+<td><strong>Block page navigation until passed</strong></td>
+<td>A later step breaks if this one isn’t done</td>
+</tr>
+<tr>
+<td><strong>Required for submission</strong></td>
+<td>It’s a must-do item</td>
+</tr>
+<tr>
+<td><strong>Show results in reports</strong></td>
+<td>You want the result in the lab record for CSMs</td>
+</tr>
+<tr>
+<td><strong>Correct and incorrect feedback</strong></td>
+<td>Always. Tell learners <em>what</em> to fix</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="scoring">Scoring</h2>
+
+<p>If the lab is scored, include these decisions in your draft:</p>
+
+<ul>
+<li>The <strong>passing score</strong> for the lab</li>
+<li>A <strong>value for each scored activity</strong>. Unscored activities count as practice</li>
+<li>What learners see at the end: nothing, their score, or a full breakdown</li>
+<li>Whether it’s an <strong>exam-style lab</strong>: with on-demand evaluation turned off, activities are only scored when the lab is submitted</li>
+<li>Any <strong>outcomes</strong>: for example, a wrong answer sends the learner to a review page</li>
+</ul>
+
+<p>Scoring is decided per program, with the client. Check with the program’s CSM before you design a scored lab.</p>
+
+<p class="doclink"><span>More in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/activities" target="_blank" rel="noopener">Automating activities</a></p>
+
+<p class="doclink"><span>And:</span> <a href="https://docs.skillable.com/docs/scoring" target="_blank" rel="noopener">Scoring</a></p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

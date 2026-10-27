@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When something goes wrong | Skillable at GA</title>
+<meta name="description" content="Triage, the fix order, common problems, who to contact and how to reach Skillable support.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_arch_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>When something goes wrong</h1>
+    <p class="dek">Triage, the fix order, common problems, who to contact and how to reach Skillable support.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Instructors and TAs during live sessions</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="triage-first-three-questions">Triage first: three questions</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>What the answer points to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>How many learners are affected?</strong></td>
+<td>One: their device or network. Several in one location: that network. Everyone: the platform</td>
+</tr>
+<tr>
+<td><strong>What do they see?</strong></td>
+<td>A black screen, a connection message, lag, an error, or a lab that won’t launch</td>
+</tr>
+<tr>
+<td><strong>Constant or intermittent?</strong></td>
+<td>Intermittent usually means connectivity</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>If <strong>everyone</strong> is affected, check <a data-link="status"></a> before anything else.</p>
+
+<h2 id="the-fix-order-for-a-misbehaving-lab">The fix order for a misbehaving lab</h2>
+
+<p>Work down this list. Stop as soon as it’s fixed.</p>
+
+<ol class="steps">
+<li><strong>Reconnect</strong> (machine menu in the lab window) for a black, frozen or disconnected desktop. The machine keeps running.</li>
+<li><strong>Refresh the page</strong> (F5) for a stuck instructions pane, or if Reconnect didn’t help.</li>
+<li><strong>Relaunch from TMS</strong> if the lab window was closed or the first two steps didn’t work. A running or saved lab resumes where it was.</li>
+<li><strong>Reset or reboot the machine</strong> only if it’s hung. Unsaved work in open apps may be lost. If it keeps happening, stop and contact Skillable support.</li>
+<li><strong>Cancel and relaunch</strong> only as a last resort. This wipes the machine. Make sure the learner has pushed to GitHub first, and consider asking Skillable support for alternatives.</li>
+</ol>
+
+<figure class="shot" data-shot="lab-machine-reconnect"><img src="../assets/screens/lab-machine-reconnect.png" alt="The machine menu showing the Reconnect option"><div class="shot-ph"><strong>Screenshot to add</strong><span>The machine menu showing the Reconnect option</span><code>assets/screens/lab-machine-reconnect.png</code></div><figcaption>Reconnect, in the machine menu, fixes a black or frozen desktop. The machine keeps running.</figcaption></figure>
+<h2 id="common-problems">Common problems</h2>
+
+<h3 id="can-t-sign-in-or-can-t-see-the-class">Can’t sign in or can’t see the class</h3>
+
+<ul>
+<li>Is the learner using the <strong>same email</strong> GA enrolled? Each email can only have one account.</li>
+<li>Has the <strong>class started</strong>? Labs appear when the class starts.</li>
+<li>Is their enrollment status <strong>Enrolled</strong>?</li>
+<li><strong>Don’t let them create a new account.</strong> Send their name and email to the program’s CSM.</li>
+</ul>
+
+<h3 id="lab-won-t-launch">Lab won’t launch</h3>
+
+<ul>
+<li><strong>Pop-ups blocked:</strong> the lab opens in a new window. Allow pop-ups for the TMS site.</li>
+<li><strong>Corporate network or VPN:</strong> ask them to run the connection test at <a data-link="speedTest"></a>. If it fails, try a different network or turn off the VPN if their employer allows it.</li>
+<li><strong>Launch limit reached:</strong> contact the lab admin.</li>
+</ul>
+
+<figure class="shot" data-shot="popup-blocked"><img src="../assets/screens/popup-blocked.png" alt="A browser pop-up blocked message after launching a lab"><div class="shot-ph"><strong>Screenshot to add</strong><span>A browser pop-up blocked message after launching a lab</span><code>assets/screens/popup-blocked.png</code></div><figcaption>If pop-ups are blocked, the lab can’t open. Allow pop-ups for the TMS site.</figcaption></figure>
+<h3 id="lab-is-slow-or-laggy">Lab is slow or laggy</h3>
+
+<ul>
+<li>One learner: their network. Try a wired connection, close other tabs, turn off VPN if allowed.</li>
+<li>Several learners in the same location: contact Skillable support <strong>and</strong> that location’s IT team at the same time.</li>
+</ul>
+
+<h3 id="learner-lost-their-work">Learner lost their work</h3>
+
+<ul>
+<li>If they pushed to GitHub: <code>git clone</code> (fresh machine) or <code>git pull</code> and continue.</li>
+<li>If they didn’t: the work on the machine can’t be recovered after End, Cancel or an expired save. Use it as a teaching moment for the whole class, not just the learner.</li>
+</ul>
+
+<h3 id="lab-timer-is-about-to-run-out">Lab timer is about to run out</h3>
+
+<ul>
+<li>The learner should <strong>extend</strong> when the warning appears.</li>
+<li>If extending isn’t available: push to GitHub now, then relaunch.</li>
+</ul>
+
+<h3 id="learner-sees-end-but-not-save-and-close">Learner sees End but not Save and Close</h3>
+
+<ul>
+<li>That lab isn’t set up to save. Push to GitHub before exiting.</li>
+</ul>
+
+<h3 id="learner-chose-end-or-cancel-on-a-saved-lab">Learner chose End or Cancel on a saved lab</h3>
+
+<ul>
+<li>The machine is gone and the next launch starts fresh. Have them re-clone from GitHub and re-run setup (<code>gh auth login</code>, reinstall packages).</li>
+</ul>
+
+<h2 id="tool-problems-on-the-machine">Tool problems on the machine</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git push</code> asks for credentials or fails</td>
+<td>Not signed in to GitHub on this machine</td>
+<td><code>gh auth login</code></td>
+</tr>
+<tr>
+<td>A Python package is missing</td>
+<td>Not in the base image, or added on a previous fresh machine</td>
+<td><code>pip install</code> it, and tell Lab admin if every learner needs it</td>
+</tr>
+<tr>
+<td>A tool is missing or the wrong version for everyone</td>
+<td>Base image issue</td>
+<td>Lab admin. Don’t have learners install workarounds unless told to</td>
+</tr>
+<tr>
+<td>A tool such as Claude Code asks to sign in instead of offering the preset key</td>
+<td>API key not present in this session</td>
+<td>Open a new terminal and try again. If it persists, relaunch the lab, then contact the lab admin</td>
+</tr>
+<tr>
+<td>A tool such as Claude Code stops with a usage or limit error</td>
+<td>The program’s API usage limit has been reached</td>
+<td>Contact Lab admin</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>More about keys and variables is in the <a href="../instructors/faq.html#environment-variables">FAQ</a>.</p>
+
+<h2 id="helping-a-learner-directly">Helping a learner directly</h2>
+
+<p>Use <strong>Monitor Labs</strong> to watch a learner’s screen or take control of their lab. Steps and etiquette are on <a href="../instructors/during-class.html">During class</a>.</p>
+
+<h2 id="who-to-contact">Who to contact</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learner can’t sign in, or isn’t on the roster</td>
+<td>The program’s <strong>CSM</strong></td>
+</tr>
+<tr>
+<td>Tool missing, VM broken, lab settings, launch limit, API limit</td>
+<td>Lab admin</td>
+</tr>
+<tr>
+<td>Lab instruction errors</td>
+<td>The LED or SME for the course, who sends the fix to Lab admin</td>
+</tr>
+<tr>
+<td>Whole platform down</td>
+<td>Check <a data-link="status"></a>, then tell Lab admin</td>
+</tr>
+<tr>
+<td>Platform problems, or any lab issue when the lab admin isn’t available (for example, UK daytime deliveries)</td>
+<td><strong>GA’s Skillable priority support address</strong> (below)</td>
+</tr>
+<tr>
+<td>Urgent during a live class</td>
+<td>The program’s <strong>CSM</strong>, who escalates to Lab admin if needed</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>During the lab admin’s working hours, route issues through GA so there’s one thread and one record.</p>
+
+<p><strong>Before you escalate, have ready:</strong> the lab instance ID (from the lab’s Help panel), the learner’s name, how many learners are affected, what you’ve tried, and a screenshot.</p>
+
+<figure class="shot" data-shot="lab-help-panel"><img src="../assets/screens/lab-help-panel.png" alt="The lab Help panel showing the lab instance ID"><div class="shot-ph"><strong>Screenshot to add</strong><span>The lab Help panel showing the lab instance ID</span><code>assets/screens/lab-help-panel.png</code></div><figcaption>The Help panel shows the lab instance ID. Include it in every support ticket.</figcaption></figure>
+<h2 id="contact-skillable-support">Contact Skillable support</h2>
+
+<p>GA has priority support with Skillable, with our own support address. Use it for platform problems: labs that won’t launch, outages, slow or broken machines, and anything urgent when the lab admin isn’t available.</p>
+
+<ol class="steps">
+<li><strong>Email GA’s priority support address first:</strong> <a data-link="supportEmail"></a>. If a live class is blocked, put <strong>LIVE CLASS</strong> in the subject line.</li>
+<li><strong>Only if you can’t reach anyone,</strong> open a ticket on Skillable’s support site, <a data-link="support"></a>. Support runs 24/7.</li>
+<li><strong>Tell the lab admin</strong> what you sent and any reference number, so it can be followed up during GA hours.</li>
+</ol>
+
+<p>Changes to a lab always go to the lab admin, not Skillable. Lab content and settings are GA’s.</p>
+
+<p><strong>Include in every message:</strong></p>
+
+<ul>
+<li>Lab instance ID for each affected learner (ask the learner for a screenshot of the Help panel while the lab is still open)</li>
+<li>Class page link and learner names, if you don’t have instance IDs</li>
+<li>How many learners are affected</li>
+<li>What you expected and what happened, with screenshots and steps to reproduce</li>
+<li>Whether it’s constant or intermittent, and what you’ve already tried</li>
+<li>For performance issues: learner location, VPN or proxy use, data center (from the Help panel) and connection test results</li>
+</ul>
+
+<figure class="shot" data-shot="skillable-support-ticket"><img src="../assets/screens/skillable-support-ticket.png" alt="Skillable’s customer support page with the Open a support ticket button"><div class="shot-ph"><strong>Screenshot to add</strong><span>Skillable’s customer support page with the Open a support ticket button</span><code>assets/screens/skillable-support-ticket.png</code></div><figcaption>Skillable support: select Open a support ticket. Support runs 24/7.</figcaption></figure>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

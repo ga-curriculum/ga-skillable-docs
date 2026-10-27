@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud services, access and credentials | Skillable at GA</title>
+<meta name="description" content="How Skillable labs reach cloud services, how learners get their sign-in details, and how to handle keys safely.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_loop_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Cloud services, access and credentials</h1>
+    <p class="dek">How Skillable labs reach cloud services, how learners get their sign-in details, and how to handle keys safely.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Subject matter experts and LEDs</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="how-cloud-access-works">How cloud access works</h2>
+
+<p>A Skillable lab can do more than run a machine. It can also launch against a <strong>cloud subscription</strong>. Azure and AWS are built in, and other platforms can be connected. The lab admin sets this up in Studio from your <a href="../smes/tech-requirements.html">tech requirements</a>:</p>
+
+<ul>
+<li><strong>Cloud resources</strong> can be created automatically for each learner when the lab launches, from a template.</li>
+<li><strong>Cloud sign-in details</strong> can be issued to each learner and shown in the lab instructions.</li>
+<li><strong>Shared resources</strong> can be created once for the whole cohort and used by everyone.</li>
+</ul>
+
+<h2 id="shared-or-one-per-learner">Shared or one per learner?</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>One per learner</strong></th>
+<th><strong>Shared by the cohort</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Isolation</td>
+<td>Learners can’t affect each other</td>
+<td>One learner can change or delete things others use</td>
+</tr>
+<tr>
+<td>Permissions</td>
+<td>Learners can safely have broad rights on their own resources</td>
+<td>Keep learners to the smallest role that works</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Multiplies by headcount</td>
+<td>One cost for the cohort</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>May hit cloud limits for large groups</td>
+<td>Rarely an issue</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Say which you need for each service, and why, in the requirements.</p>
+
+<h2 id="show-sign-in-details-in-the-instructions">Show sign-in details in the instructions</h2>
+
+<p>Cloud tokens fill in each learner’s own details when the lab launches. They only work in labs that use a cloud subscription.</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Gives you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@lab.CloudPortalCredential(User1).Username</code></td>
+<td>The learner’s cloud portal username</td>
+</tr>
+<tr>
+<td><code>@lab.CloudPortalCredential(User1).Password</code></td>
+<td>Their cloud portal password</td>
+</tr>
+<tr>
+<td><code>@lab.CloudSubscription.Id</code></td>
+<td>The ID of the subscription the lab launched against</td>
+</tr>
+<tr>
+<td><code>@lab.CloudSubscription.Name</code></td>
+<td>The subscription’s name</td>
+</tr>
+<tr>
+<td><code>@lab.CloudSubscription.TenantName</code></td>
+<td>The tenant’s name</td>
+</tr>
+<tr>
+<td><code>@lab.CloudResourceTemplate(Template1).Parameters[name]</code></td>
+<td>A value used to create the learner’s resources, such as a unique resource name</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>The exact names (<code>User1</code>, <code>Template1</code>) depend on how the lab is set up. Ask the lab admin which tokens your lab has.</p>
+
+<p class="doclink"><span>Full list in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/replacement-tokens" target="_blank" rel="noopener">Replacement tokens</a></p>
+
+<h2 id="credentials-and-keys">Credentials and keys</h2>
+
+<p><strong>Never share credentials in chat, on slides or in any unencrypted message.</strong> Ask for one of these instead, in this order:</p>
+
+<ol class="steps">
+<li><strong>Issued at launch by Skillable,</strong> and shown with a token or set in the environment. Nothing to hand out, and nothing to leak.</li>
+<li><strong>Written into the lab image</strong> before delivery, for example a <code>.env</code> file already in place in the starter code. Lab steps should only create a <code>.env</code> if one doesn’t exist, so they never overwrite it.</li>
+<li><strong>Sent through a channel approved for credentials,</strong> if neither of the above is possible.</li>
+</ol>
+
+<p><strong>Keep them out of GitHub.</strong> <code>.env</code> always goes in <code>.gitignore</code>. Only an example file with empty values belongs in a repository. If a real key is ever pushed, treat it as compromised and rotate it.</p>
+
+<p><strong>Keep key-based sign-in turned on</strong> for services learners reach with a key. If it’s turned off, every learner needs their own cloud role and sign-in instead.</p>
+
+<h2 id="network-access">Network access</h2>
+
+<p>The lab machine can only reach the sites it’s allowed to. List every domain your labs need, for example:</p>
+
+<ul>
+<li>Your Git host (for example <code>github.com</code>)</li>
+<li>Package indexes (for example <code>pypi.org</code> and <code>files.pythonhosted.org</code>)</li>
+<li>Every cloud service endpoint and portal</li>
+<li>The sign-in service for the cloud platform</li>
+<li>Any AI or other outside API the labs call</li>
+</ul>
+
+<p>A blocked domain is the most common cause of failures on delivery day. The lab admin checks the list before the first session, so it has to be complete.</p>
+
+<h2 id="cost-and-cleanup">Cost and cleanup</h2>
+
+<ul>
+<li><strong>Cloud services cost money while they exist,</strong> even if nobody is using them. Note anything billed by the hour, and anything multiplied by headcount.</li>
+<li><strong>Plan the cleanup</strong> in your requirements: which resources to delete, which keys to rotate, and which accounts and roles to remove when the program ends.</li>
+</ul>
+
+<p class="doclink"><span>More in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/cloud-credential-pool" target="_blank" rel="noopener">Cloud credential pools</a></p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

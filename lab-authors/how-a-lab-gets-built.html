@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a lab gets built | Skillable at GA</title>
+<meta name="description" content="Who does what, what you hand to the lab admin, and how much lead time each step needs.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_whorl_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>How a lab gets built</h1>
+    <p class="dek">Who does what, what you hand to the lab admin, and how much lead time each step needs.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>LEDs and SMEs</dd></div>
+    <div><dt>Time</dt><dd>5 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="the-workflow">The workflow</h2>
+
+<ol class="steps">
+<li><strong>The SME writes the tech requirements.</strong> Every tool, pinned package, cloud service, role, website and credential the labs need. See <a href="../smes/tech-requirements.html">Write the tech requirements</a>.</li>
+<li><strong>The LED writes the instructions</strong> in Markdown, using their usual lesson or lab template, and adds Skillable syntax from the <a href="../lab-authors/markdown-reference.html">Markdown reference</a>. The SME checks technical accuracy.</li>
+<li><strong>The LED specifies the activities.</strong> Questions, automated checks and scoring, described in the draft. See <a href="../lab-authors/activities-and-scoring.html">Activities and scoring</a>.</li>
+<li><strong>You send it to the lab admin.</strong> The Markdown file, the tool list and the activity specs.</li>
+<li><strong>The lab is built in Studio</strong>, by the lab admin or with you in a working session (below). That means building or updating the machine image, loading your instructions, building the activities and publishing the lab.</li>
+<li><strong>You review it in a real launch.</strong> Skillable syntax only renders inside a running lab, so this is the only true preview. Contractors may test it too. See <a href="../lab-authors/test-a-lab.html">Test a lab</a>.</li>
+<li><strong>Fixes go back to the lab admin</strong> as updated Markdown, until the lab is ready.</li>
+</ol>
+
+<h2 id="who-does-what">Who does what</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>LED</th>
+<th>SME</th>
+<th>The lab admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learning design and lab structure</td>
+<td>Owns</td>
+<td>Supports</td>
+<td></td>
+</tr>
+<tr>
+<td>Lab instructions (Markdown)</td>
+<td>Writes</td>
+<td>Reviews for accuracy</td>
+<td>Loads into Studio</td>
+</tr>
+<tr>
+<td>Tools and packages on the machine</td>
+<td>Supports</td>
+<td>Specifies</td>
+<td>Builds the image</td>
+</tr>
+<tr>
+<td>Activities, questions and scoring</td>
+<td>Specifies</td>
+<td>Checks the answers</td>
+<td>Builds in Studio</td>
+</tr>
+<tr>
+<td>Lab settings (duration, timeouts, saving)</td>
+<td>Requests</td>
+<td></td>
+<td>Configures</td>
+</tr>
+<tr>
+<td>Review in a real launch</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="build-in-studio">Build in Studio</h2>
+
+<p>GA has four Studio licenses. Lauren holds one as admin and builder. The other three rotate to SMEs, LEDs or instructors while they’re actively building a course.</p>
+
+<ol class="steps">
+<li><strong>Ask for a working session.</strong> Say what you’re building and what needs to change on the machine.</li>
+<li><strong>The lab admin sets up the course shell</strong> and gives you one of the shared Studio licenses.</li>
+<li><strong>You install and customize inside the machine:</strong> tools, packages, settings and files.</li>
+<li><strong>The lab admin captures your changes</strong> and saves them to the lab image, so every learner launch includes them.</li>
+<li><strong>The license goes back to the pool</strong> when the build is done, ready for the next person.</li>
+</ol>
+
+<div class="callout tip">
+<p><strong>Not building hands-on?</strong> You don’t need Studio. Send your Markdown and <a href="../smes/tech-requirements.html">tech requirements</a>, and the lab admin will build it.</p>
+
+</div>
+
+<h2 id="what-to-send-lauren">What to send the lab admin</h2>
+
+<ul class="checklist">
+<li><label><input type="checkbox"><span>The full instructions as a Markdown file (not a description of them)</span></label></li>
+<li><label><input type="checkbox"><span>The tech requirements from the SME</span></label></li>
+<li><label><input type="checkbox"><span>Each activity specified: what it checks, the question and answers, points and feedback</span></label></li>
+<li><label><input type="checkbox"><span>Lab settings you need, if not the defaults: duration, save behavior, timeouts</span></label></li>
+<li><label><input type="checkbox"><span>The program, the lab name and the session date it’s needed for</span></label></li>
+</ul>
+
+<h2 id="lead-times">Lead times</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>What</th>
+<th>Minimum notice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New lab on an existing machine image</td>
+<td>3 days</td>
+</tr>
+<tr>
+<td>New tool or package on the machine</td>
+<td>3 days</td>
+</tr>
+<tr>
+<td>New machine image (different operating system or major toolset)</td>
+<td>5 days</td>
+</tr>
+<tr>
+<td>Instruction fixes, reworks and setting changes</td>
+<td>24 hours</td>
+</tr>
+<tr>
+<td>A live cloud platform (Azure, AWS, GCP) inside labs</td>
+<td>Talk to Lab admin early. It can take 1 to 2 weeks</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>For a new program, aim to hand over final instructions <strong>14 days</strong> before the session and have the lab reviewed <strong>7 days</strong> before. The <a href="../csms/launch-checklist.html">launch checklist</a> shows where this fits.</p>
+
+<h2 id="write-in-your-own-editor">Write in your own editor</h2>
+
+<p>Any Markdown editor works. VS Code is a good choice. Its preview will show standard Markdown, but Skillable’s own syntax (click-to-type text, callout blocks, <code>@lab</code> tokens) only renders in a running lab. Don’t worry if the preview looks odd.</p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

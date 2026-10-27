@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updating this site | Skillable at GA</title>
+<meta name="description" content="How to edit a page, add a page, add a client and publish. You don’t need to know how to code.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero white">
+    <img class="fp" src="../assets/img/fp_loop_black.png" alt="">
+    <p class="kicker"></p>
+    <h1>Updating this site</h1>
+    <p class="dek">How to edit a page, add a page, add a client and publish. You don’t need to know how to code.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Whoever maintains the Skillable guides</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>This site is a folder of ordinary files. Each page is one <code>.html</code> file, and the look of the whole site is one <code>.css</code> file. There’s no build step and nothing to install. Edit a file, save it, refresh your browser.</p>
+
+<p><strong>What you need:</strong> a plain text editor (VS Code is ideal; Notepad or TextEdit in plain-text mode also works). To publish for a team, a GitHub account.</p>
+
+<h2 id="which-file-do-i-edit">Which file do I edit?</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>I want to change…</th>
+<th>Edit this file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The words on a page</td>
+<td>That page’s <code>.html</code> file</td>
+</tr>
+<tr>
+<td>Who to contact for help (name and email)</td>
+<td><code>assets/js/site-config.js</code></td>
+</tr>
+<tr>
+<td>The TMS sign-in link, the support link or the status link</td>
+<td><code>assets/js/site-config.js</code> (change it once and every page updates)</td>
+</tr>
+<tr>
+<td>The menu, or a page’s title or summary in the sidebar and section pages</td>
+<td><code>assets/js/site-config.js</code></td>
+</tr>
+<tr>
+<td>A screenshot</td>
+<td>Save a new PNG over the old one in <code>assets/screens/</code></td>
+</tr>
+<tr>
+<td>Colors, fonts, spacing</td>
+<td><code>assets/css/styles.css</code></td>
+</tr>
+<tr>
+<td>The version and date in the footer</td>
+<td><code>assets/js/site-config.js</code></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>You should never need to edit <code>assets/js/site.js</code>. It builds the sidebar, progress tracking and footers.</p>
+
+<h2 id="how-the-folders-are-organized">How the folders are organized</h2>
+
+<pre><code>index.html           The home page
+get-started/         Get started: what Skillable is, signing in, glossary
+instructors/         For instructors
+lab-authors/         For LEDs and SMEs
+csms/                For CSMs
+help/                This page and the screenshot list
+_templates/          Copy these to make new pages
+assets/
+  css/styles.css     The look of the site
+  js/site-config.js  Menus, contact details, shared links
+  js/site.js         Behind the scenes (don't edit)
+  screens/           Screenshots (PNG files)
+  files/             Downloads, such as the lab template
+  img/ and fonts/    Logos, images and fonts
+</code></pre>
+
+<p>Keep every page inside its folder. The pages find the shared files by their location, so moving a page to a different depth breaks its links.</p>
+
+<h2 id="edit-the-words-on-a-page">Edit the words on a page</h2>
+
+<ol class="steps">
+<li><strong>Open the page’s <code>.html</code> file</strong> in your text editor.</li>
+<li><strong>Find the banner</strong> that says <code>EDIT THE PAGE CONTENT BELOW THIS LINE</code>. Everything between it and <code>STOP EDITING HERE</code> is the page’s content.</li>
+<li><strong>Change the words</strong> between the tags. Keep the tags themselves, the bits in <code>&lt; &gt;</code>.</li>
+<li><strong>Save and refresh</strong> the page in your browser.</li>
+</ol>
+
+<p>The title area at the top of each page (the <code>&lt;h1&gt;</code> headline, the paragraph under it, and the “who it’s for” line) is also yours to edit. Leave the other parts of the file alone.</p>
+
+<div class="callout warn">
+<p><span class="callout-title">The one rule</span></p>
+
+<p>Each opening tag needs its closing tag. If you delete <code>&lt;p&gt;</code> you must delete its <code>&lt;/p&gt;</code> too. When a page looks strange after an edit, a missing closing tag is almost always the reason.</p>
+
+</div>
+
+<h2 id="copy-and-paste-building-blocks">Copy-and-paste building blocks</h2>
+
+<p>Copy one of these, paste it where you want it, and change the words.</p>
+
+<h3 id="a-heading">A heading</h3>
+
+<p>Each <code>&lt;h2&gt;</code> heading appears in the “On this page” list automatically.</p>
+
+<pre><code class="language-html">&lt;h2&gt;Heading text&lt;/h2&gt;
+</code></pre>
+
+<h3 id="a-paragraph-with-bold-and-a-link">A paragraph, with bold and a link</h3>
+
+<pre><code class="language-html">&lt;p&gt;Some text with &lt;strong&gt;bold words&lt;/strong&gt; and a &lt;a href=&quot;../instructors/faq.html&quot;&gt;link to another page&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+
+<p>Links to other pages use <code>../</code> to step out of the current folder, then the folder and file name.</p>
+
+<h3 id="bullets">Bullets</h3>
+
+<pre><code class="language-html">&lt;ul&gt;
+&lt;li&gt;First point&lt;/li&gt;
+&lt;li&gt;Second point&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3 id="numbered-steps">Numbered steps</h3>
+
+<pre><code class="language-html">&lt;ol class=&quot;steps&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Short step title.&lt;/strong&gt; A sentence of detail.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Next step.&lt;/strong&gt; More detail.&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<h3 id="a-callout-box">A callout box</h3>
+
+<p>Use <code>callout</code> for neutral notes, <code>callout warn</code> for anything that could lose someone’s work, and <code>callout tip</code> for helpful extras.</p>
+
+<pre><code class="language-html">&lt;div class=&quot;callout warn&quot;&gt;
+&lt;span class=&quot;callout-title&quot;&gt;Watch out&lt;/span&gt;
+&lt;p&gt;Push to GitHub before you exit the lab.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="a-table">A table</h3>
+
+<pre><code class="language-html">&lt;div class=&quot;tscroll&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Column A&lt;/th&gt;&lt;th&gt;Column B&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;Two&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Three&lt;/td&gt;&lt;td&gt;Four&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="a-question-and-answer">A question and answer</h3>
+
+<p>Put several of these inside one <code>faq</code> block. Visitors click a question to open its answer.</p>
+
+<pre><code class="language-html">&lt;div class=&quot;faq&quot;&gt;
+&lt;details&gt;
+&lt;summary&gt;The question?&lt;/summary&gt;
+&lt;div class=&quot;answer&quot;&gt;&lt;p&gt;The answer.&lt;/p&gt;&lt;/div&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="cards-that-link-to-other-pages">Cards that link to other pages</h3>
+
+<pre><code class="language-html">&lt;div class=&quot;cards&quot;&gt;
+&lt;a class=&quot;card&quot; href=&quot;../get-started/glossary.html&quot;&gt;&lt;h3&gt;Card title&lt;/h3&gt;&lt;p&gt;One line about the page.&lt;/p&gt;&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="a-checklist-people-can-tick">A checklist people can tick</h3>
+
+<p>Ticks are remembered in each visitor’s own browser.</p>
+
+<pre><code class="language-html">&lt;ul class=&quot;checklist&quot;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;&lt;span&gt;Do this thing&lt;/span&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3 id="a-code-block">A code block</h3>
+
+<p>Visitors get a Copy button automatically. Write <code>&amp;lt;</code> instead of <code>&lt;</code> inside code.</p>
+
+<pre><code class="language-html">&lt;pre&gt;&lt;code&gt;git add .
+git commit -m &quot;what changed&quot;
+git push&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
+
+<h3 id="a-shared-link-or-the-lab-admin-s-details">A shared link or the lab admin’s details</h3>
+
+<p>These fill in from <code>site-config.js</code>, so you change them in one place. Leave the link empty and it shows the address.</p>
+
+<pre><code class="language-html">&lt;a data-link=&quot;tms&quot;&gt;&lt;/a&gt;
+&lt;a data-link=&quot;speedTest&quot;&gt;&lt;/a&gt;
+&lt;a data-link=&quot;support&quot;&gt;&lt;/a&gt;
+&lt;a data-link=&quot;status&quot;&gt;&lt;/a&gt;
+&lt;a data-link=&quot;docs&quot;&gt;&lt;/a&gt;
+&lt;span data-site=&quot;labAdminName&quot;&gt;&lt;/span&gt;
+&lt;a data-link=&quot;labAdminEmail&quot;&gt;&lt;/a&gt;
+</code></pre>
+
+<h2 id="add-screenshots">Add screenshots</h2>
+
+<p>Wherever a screenshot is missing, the site shows a dashed <strong>Screenshot to add</strong> box. To fill one, save your screenshot as a PNG with the exact file name shown in the box and put it in <code>assets/screens/</code>. The full list, with exactly what to capture for each, is on <a href="../help/screenshots.html">Screenshots to take</a>.</p>
+
+<p>To hide the dashed boxes until the files exist, set <code>showPlaceholders: false</code> in <code>assets/js/site-config.js</code>.</p>
+
+<h2 id="change-the-menu-contact-or-shared-links">Change the menu, contact or shared links</h2>
+
+<p>Open <code>assets/js/site-config.js</code>. It’s a list with plenty of comments. Keep the double quotes and the commas, and don’t put a double quote inside text.</p>
+
+<h2 id="add-a-new-page">Add a new page</h2>
+
+<ol class="steps">
+<li><strong>Copy the template.</strong> Copy <code>_templates/new-page.html</code> into the right folder, for example <code>instructors/</code>. Give it a short name with no spaces, like <code>new-hire-checklist.html</code>.</li>
+<li><strong>Fill in the title area and the content.</strong></li>
+<li><strong>Add it to the menu.</strong> Open <code>assets/js/site-config.js</code> and add a line like the example below inside the right group.</li>
+<li><strong>Open the page</strong> in your browser and check the sidebar and the Next button at the bottom.</li>
+</ol>
+
+<p>Example menu entry:</p>
+
+<pre><code class="language-js">{ file: &quot;instructors/new-hire-checklist.html&quot;, nav: &quot;New hire checklist&quot;, title: &quot;New hire checklist for instructors&quot;, summary: &quot;One sentence about what it helps you do.&quot;, time: &quot;3 min&quot;, who: &quot;New instructors&quot;, keywords: &quot;onboarding new hire&quot; },
+</code></pre>
+
+<h2 id="change-colors-or-fonts">Change colors or fonts</h2>
+
+<p>Open <code>assets/css/styles.css</code>. The brand colors and fonts are at the top, in the block called <code>:root</code>. Change a value there and it changes everywhere.</p>
+
+<h2 id="publish-it">Publish it</h2>
+
+<p><strong>Share as files.</strong> Zip the whole folder and send it. Anyone can unzip it and double-click <code>index.html</code>. It works offline in any modern browser.</p>
+
+<p><strong>Publish with GitHub Pages</strong>, so the team has one address:</p>
+
+<ol class="steps">
+<li><strong>Create a repository</strong> on GitHub, for example <code>skillable-at-ga</code>. It can be private if your plan supports private Pages. Otherwise anyone with the link can read it.</li>
+<li><strong>Upload the whole folder’s contents</strong>, keeping the folders as they are. <code>index.html</code> must sit at the top level.</li>
+<li><strong>Turn on Pages.</strong> Go to <strong>Settings → Pages</strong>, choose <strong>Deploy from a branch</strong>, select <code>main</code> and <code>/ (root)</code>, and save.</li>
+<li><strong>Wait a minute or two.</strong> GitHub shows the site’s address, usually <code>https://your-account.github.io/skillable-at-ga/</code>.</li>
+<li><strong>To update,</strong> edit a file and commit it. GitHub republishes automatically.</li>
+</ol>
+
+<p>Links to a single page work too, for example <code>.../instructors/faq.html</code>. Copy them from the browser’s address bar.</p>
+
+<h2 id="if-something-looks-wrong">If something looks wrong</h2>
+
+<ul>
+<li><strong>A page has no menu or sidebar:</strong> the page can’t find <code>assets/js/site-config.js</code>. Check that the page is still inside its folder and the file name is unchanged.</li>
+<li><strong>The whole menu disappeared after an edit to <code>site-config.js</code>:</strong> a quote or comma is missing. Undo your last change.</li>
+<li><strong>Part of a page is missing or oddly formatted:</strong> a closing tag was deleted. Compare with a page that works.</li>
+<li><strong>A change doesn’t show up:</strong> refresh your browser with Ctrl+F5 (Cmd+Shift+R on a Mac).</li>
+<li><strong>Printing:</strong> every page prints cleanly. Use your browser’s Print or Save as PDF.</li>
+</ul>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

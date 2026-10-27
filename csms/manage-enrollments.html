@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enroll and manage learners in TMS | Skillable at GA</title>
+<meta name="description" content="What to do, and what to watch out for, when you enroll a class, add or remove a learner, move learners or fix an account.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_arch_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Enroll and manage learners in TMS</h1>
+    <p class="dek">What to do, and what to watch out for, when you enroll a class, add or remove a learner, move learners or fix an account.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>CSMs</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<!-- CONFIRM WITH LAUREN: which Admin menu items the CSM (Operations Manager) role can see in GA's TMS,
+     especially Import Users and Merge Users, and whether learners are set to Enrolled or Requested before class. -->
+
+<p>Most of this happens from the <strong>Admin</strong> menu at the top of TMS. This page covers what GA needs you to do and watch out for. Each section links to Skillable’s step-by-step guide for the clicks. If a menu item is missing for you, your role may not include it. Reach out to the lab admin.</p>
+
+<figure class="shot" data-shot="tms-admin-menu"><img src="../assets/screens/tms-admin-menu.png" alt="The TMS Admin menu open, showing the Users, Enrollments, Classes and Labs groups"><div class="shot-ph"><strong>Screenshot to add</strong><span>The TMS Admin menu open, showing the Users, Enrollments, Classes and Labs groups</span><code>assets/screens/tms-admin-menu.png</code></div><figcaption>The Admin menu. Most CSM tasks start here.</figcaption></figure>
+<div class="callout warn">
+<p><span class="callout-title">Read this first</span></p>
+
+<p><strong>Enrolled is what Skillable bills for.</strong> Skillable charges GA for every learner marked <strong>Enrolled</strong>, and once the class starts that status <strong>can’t be changed</strong>. Get the roster right, and remove anyone who isn’t coming, <strong>before the start date</strong>.</p>
+
+</div>
+
+<h2 id="enrollment-statuses">Enrollment statuses</h2>
+
+<p>An enrollment is a learner’s registration for one class. The statuses you’ll use:</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enrolled</strong></td>
+<td>Attending. Only Enrolled (or Audit) learners can launch labs once class starts. Billed, and locked once class starts</td>
+</tr>
+<tr>
+<td><strong>Requested</strong></td>
+<td>Registered, not yet confirmed. Can still be changed after class starts</td>
+</tr>
+<tr>
+<td><strong>Cancelled</strong></td>
+<td>No longer taking the class</td>
+</tr>
+<tr>
+<td><strong>Wait-Listed</strong></td>
+<td>Waiting for a seat in a full class</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Skillable recommends adding learners as <strong>Requested</strong> and marking them <strong>Enrolled</strong> on day one. Confirm with the lab admin which approach your program uses. You change statuses on the class <strong>Roster</strong>: pick the new status for each learner, then select <strong>Save Changes</strong>.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/change-class-enrollment-status-and-which-to-use" target="_blank" rel="noopener">Understanding and changing enrollment statuses</a></p>
+
+<h2 id="import-the-roster-and-enroll-the-class">Import the roster and enroll the class</h2>
+
+<p>For programs using a <a href="../csms/roster-csv.html">roster CSV</a>.</p>
+
+<ol class="steps">
+<li><strong>Import the accounts.</strong> Use <strong>Admin</strong>, then <strong>Users</strong>, then <strong>Import Users</strong>. Leave the role as <strong>Basic User</strong>, and tick <strong>Force Password Change</strong> so learners set their own password. TMS checks every row and lists any errors before importing.</li>
+<li><strong>Enroll them in the class.</strong> Open the class <strong>Roster</strong>, select <strong>Add Students</strong>, and add everyone. Set the status your program uses, then save.</li>
+<li><strong>Send the <a href="../csms/welcome-email.html">welcome email</a>.</strong></li>
+</ol>
+
+<figure class="shot" data-shot="tms-import-users"><img src="../assets/screens/tms-import-users.png" alt="The Import Users page with the settings at the top and the user import template link"><div class="shot-ph"><strong>Screenshot to add</strong><span>The Import Users page with the settings at the top and the user import template link</span><code>assets/screens/tms-import-users.png</code></div><figcaption>Admin, Users, Import Users. Set the options at the top, then choose your CSV.</figcaption></figure>
+<figure class="shot" data-shot="tms-class-roster"><img src="../assets/screens/tms-class-roster.png" alt="A class Roster page with enrollment status dropdowns and the Add Students buttons"><div class="shot-ph"><strong>Screenshot to add</strong><span>A class Roster page with enrollment status dropdowns and the Add Students buttons</span><code>assets/screens/tms-class-roster.png</code></div><figcaption>The class Roster: change statuses inline, then select Save Changes.</figcaption></figure>
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/creating-multiple-user-accounts-2" target="_blank" rel="noopener">Importing multiple user accounts</a></p>
+
+<p class="doclink"><span>And:</span> <a href="https://docs.skillable.com/docs/enrolling-multiple-students" target="_blank" rel="noopener">Enrolling multiple students</a></p>
+
+<h2 id="add-a-late-learner">Add a late learner</h2>
+
+<ol class="steps">
+<li><strong>Check they don’t already have an account</strong> (<a href="#find-an-existing-account">find an existing account</a>). Never create a second one.</li>
+<li><strong>Create the account</strong> with <strong>Admin</strong>, then <strong>Users</strong>, then <strong>Create User</strong>.</li>
+<li><strong>Add them to the class Roster</strong> with the right status, and save.</li>
+<li><strong>Send them the welcome email.</strong></li>
+</ol>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/creating-student-user-accounts-2" target="_blank" rel="noopener">Creating a student user account</a></p>
+
+<h2 id="remove-a-learner">Remove a learner</h2>
+
+<ul>
+<li><strong>Before the class starts:</strong> set their status to <strong>Cancelled</strong> on the class Roster and save.</li>
+<li><strong>After the class starts:</strong> if they’re <strong>Enrolled</strong>, TMS won’t let you change it. Reach out to the lab admin with the learner’s name and the class.</li>
+</ul>
+
+<h2 id="move-learners-to-another-class">Move learners to another class</h2>
+
+<p>For example, when a class is rescheduled. On the <strong>new</strong> class Roster, use <strong>Add Students from Event</strong> and pick the original class. Everyone who was <strong>Enrolled</strong> there is copied across. Learners with other statuses aren’t.</p>
+
+<p>Then <strong>cancel them in the original class before it starts</strong>, so they aren’t billed twice.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/add-existing-class-enrollments-to-new-event-1" target="_blank" rel="noopener">Adding existing enrollments to a different class</a></p>
+
+<h2 id="fix-account-problems">Fix account problems</h2>
+
+<h3 id="find-an-existing-account">Find an existing account</h3>
+
+<p>Use <strong>Admin</strong>, then <strong>Users</strong>, then <strong>Find Users</strong>. Add the <strong>Disabled</strong> filter set to <em>Is Or Is Not Disabled</em>, so closed accounts show up too, and search by email. If TMS says an email is already in use, this is how you find the account. Use it rather than creating another.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/email-address-unavailable" target="_blank" rel="noopener">Managing an email address that is already in use</a></p>
+
+<h3 id="a-learner-s-email-changed">A learner’s email changed</h3>
+
+<p>Learners can’t change the email on their own account. Send the lab admin the learner’s name, their old email and their new one. <strong>Don’t create a new account</strong> for the new email.</p>
+
+<h3 id="a-learner-has-two-accounts">A learner has two accounts</h3>
+
+<p>Merge them, so their work and enrollments are in one place. Decide which account to keep first, because its username and password are the ones that survive. The duplicate is deleted and this can’t be undone. If you don’t see <strong>Merge Users</strong> in the Admin menu, reach out to the lab admin.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/managing-duplicate-user-accounts" target="_blank" rel="noopener">Managing duplicate user accounts</a></p>
+
+<h3 id="a-learner-forgot-their-password">A learner forgot their password</h3>
+
+<p>Learners reset it themselves at <a data-link="loginHelp"></a>. They’ll get a reset link by email. If they don’t know which email is on their account, <a href="#find-an-existing-account">look it up</a>.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/how-to-reset-my-password" target="_blank" rel="noopener">Resetting a password</a></p>
+
+<h2 id="check-whether-a-learner-launched-a-lab">Check whether a learner launched a lab</h2>
+
+<p>Use <strong>Admin</strong>, then <strong>Labs</strong>, then <strong>Find Lab Instances</strong>, and filter by learner, class or lab. If a lab isn’t listed, it hasn’t been launched. More on what you can report: <a href="../csms/reporting-and-grading.html">Reporting, grading and client updates</a>.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/finding-if-student-launched-lab" target="_blank" rel="noopener">Finding whether a student launched a lab</a></p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

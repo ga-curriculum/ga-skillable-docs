@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary | Skillable at GA</title>
+<meta name="description" content="Every term you’ll hear on a Skillable program, in plain language.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero white">
+    <img class="fp" src="../assets/img/fp_loop_black.png" alt="">
+    <p class="kicker"></p>
+    <h1>Glossary</h1>
+    <p class="dek">Every term you’ll hear on a Skillable program, in plain language.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Everyone</dd></div>
+    <div><dt>Time</dt><dd>Quick reference</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+
+<p>Looking for a word? Type part of it here.</p>
+
+<p><label class="sr-only" for="gloss-filter">Filter the glossary</label>
+<input class="filter-input" id="gloss-filter" type="search" placeholder="Filter terms, for example: lab, enroll, token" data-filter="#glossary" autocomplete="off"></p>
+
+<div class="tscroll">
+<table id="glossary">
+<thead><tr><th>Term</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>ABA</td><td>Activity-Based Assessment: scoring built from activities.</td></tr>
+<tr><td>Activity</td><td>A question or automated check inside a lab.</td></tr>
+<tr><td>Automated activity</td><td>A script that checks the learner’s environment.</td></tr>
+<tr><td>Class</td><td>A scheduled, instructor-led run of a course with start and end dates.</td></tr>
+<tr><td>Course</td><td>A set of labs (and other content) in TMS.</td></tr>
+<tr><td>Cloud credential pool</td><td>A set of cloud sign-in details Skillable hands out to learners, one set each, shown in the lab instructions.</td></tr>
+<tr><td>Cloud subscription</td><td>A cloud account (such as Azure or AWS) a lab launches against, so learners can use real cloud services.</td></tr>
+<tr><td>Course Assignment</td><td>Self-paced access to a course, with no class dates. GA’s instructor-led programs use classes instead.</td></tr>
+<tr><td>Enrollment</td><td>A learner’s registration in a class. Only <em>Enrolled</em> status gives access.</td></tr>
+<tr><td>Environment variable</td><td>A named setting inside the lab machine, such as an API key, that tools can read. One set by hand lasts only as long as that terminal session or machine. Some are injected automatically at launch.</td></tr>
+<tr><td>Ephemeral</td><td>Discarded when the lab ends; next launch starts clean.</td></tr>
+<tr><td>IDLx</td><td>Skillable’s version of Markdown for lab instructions. Mostly standard Markdown, plus Skillable-only syntax.</td></tr>
+<tr><td>Image / base image</td><td>The saved VM that every launch is copied from.</td></tr>
+<tr><td>Lab Instance</td><td>One launch of a lab by one person. Each launch is a new instance.</td></tr>
+<tr><td>Lab Profile</td><td>A single lab in Studio: its VMs, settings and instructions.</td></tr>
+<tr><td>Lab Report Viewer</td><td>TMS role for reporting on lab activity and scores.</td></tr>
+<tr><td>Lab Series</td><td>A group of lab profiles. A profile must be in a series to be published.</td></tr>
+<tr><td>Monitor Labs</td><td>Instructor view of all running labs in a class.</td></tr>
+<tr><td>Operations Manager</td><td>TMS role for CSMs: enroll learners and connect them to classes.</td></tr>
+<tr><td>Replacement token</td><td><code>@lab.Something</code> placeholder in lab instructions, filled in at launch.</td></tr>
+<tr><td>Tech requirements</td><td>The SME’s document listing everything a lab environment needs: tools, packages, cloud services, access, websites and credentials.</td></tr>
+<tr><td>Roster CSV</td><td>GA’s fixed-format file of learner names and emails, uploaded to TMS to create learner accounts. The other way GA can enroll learners.</td></tr>
+<tr><td>Saved lab</td><td>A paused lab instance kept until its save expiry date.</td></tr>
+<tr><td>Skillable Studio</td><td>Where labs are built: VM images, settings, instructions, activities. Used by the lab admin, plus up to three people building a course on shared licenses.</td></tr>
+<tr><td>Skillable TMS</td><td>Training Management System. Users, classes, enrollments, monitoring, reports.</td></tr>
+<tr><td>Take Control</td><td>Instructor works directly inside a learner’s lab.</td></tr>
+<tr><td>Training key</td><td>A code learners enter on the TMS sign-in page to create their own account and enroll in a class. One of the two ways GA can enroll learners.</td></tr>
+</tbody>
+</table>
+</div>
+<p class="filter-empty" hidden>No term matches that. Try a shorter word.</p>
+
+<p>Looking for quick answers instead? See the <a href="../instructors/faq.html">Instructor FAQ</a>.</p>
+
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

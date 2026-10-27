@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skillable Markdown reference | Skillable at GA</title>
+<meta name="description" content="Every piece of Skillable syntax you’re likely to need for a GA lab, with examples.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_whorl_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Skillable Markdown reference</h1>
+    <p class="dek">Every piece of Skillable syntax you’re likely to need for a GA lab, with examples.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>LEDs and SMEs</dd></div>
+    <div><dt>Time</dt><dd>Quick reference</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>You already write lab instructions in Markdown, using your own lesson and lab templates. Keep doing that. This page lists what to <strong>add</strong> so your Markdown works in Skillable: page breaks, check boxes, click-to-type commands, callouts and tokens. For everything else, see Skillable’s <a href="https://docs.skillable.com/docs/creating-instructions-with-markdown-syntax">Markdown syntax guide</a>.</p>
+
+<h2 id="the-essentials-for-every-ga-lab">The essentials for every GA lab</h2>
+
+<p>Five additions turn ordinary Markdown into a GA Skillable lab:</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Add</th>
+<th>Syntax</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Page breaks</strong> between tasks</td>
+<td><code>===</code> on its own line</td>
+<td>One task per page, with a Next button</td>
+</tr>
+<tr>
+<td><strong>Check boxes</strong> on steps</td>
+<td><code>1. [] Do the thing</code></td>
+<td>Learners track progress, and TMS reports it</td>
+</tr>
+<tr>
+<td><strong>A save alert</strong> where a session ends</td>
+<td><code>&gt; [!Alert] Commit and push to GitHub before you leave.</code></td>
+<td>Lab machines are disposable</td>
+</tr>
+<tr>
+<td><strong>Hidden spoilers</strong></td>
+<td><code>&gt; [+Hint] Stuck? Expand for the answer.</code></td>
+<td>Learners try first, then reveal</td>
+</tr>
+<tr>
+<td><strong>The lab instance ID</strong> in a footer</td>
+<td><code>@lab.LabInstance.Id</code></td>
+<td>The first thing anyone needs when a learner asks for help</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Standard Markdown (headings, <strong>bold</strong>, <em>italics</em>, lists, tables, links and images) works as you’d expect, and so does HTML.</p>
+
+<h2 id="pages-and-layout">Pages and layout</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>===</code> on its own line</td>
+<td><strong>Page break.</strong> Ends the page and adds a Next button</td>
+</tr>
+<tr>
+<td><code>---</code> on its own line</td>
+<td>A horizontal line on the same page</td>
+</tr>
+<tr>
+<td><code>&gt; text</code></td>
+<td>A block quote</td>
+</tr>
+<tr>
+<td><code>- [] step</code> or <code>1. [] step</code></td>
+<td>A task check box. TMS progress is the percentage ticked</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>No space between the brackets.</strong> GitHub-style <code>- [ ]</code> doesn’t become a check box in Skillable.</p>
+
+<h2 id="interactive-text">Interactive text</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>What learners get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>++text++</code></td>
+<td><strong>Click to copy</strong> to their clipboard</td>
+</tr>
+<tr>
+<td><code>+++text+++</code></td>
+<td><strong>Click to type</strong> into the machine, at the cursor</td>
+</tr>
+<tr>
+<td><code>++++text++++</code></td>
+<td>Copies <strong>and</strong> types</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<p>Put the language after the opening fence: the shell learners use, such as <code>```PowerShell</code> or <code>```bash</code>, or <code>```python</code>, or <code>```text</code> for plain output. Add one of these to the language to change how the block behaves:</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-nocopy</code></td>
+<td>Highlighted, but no copy button. Use it for <strong>expected output</strong>, and for code learners should type themselves</td>
+</tr>
+<tr>
+<td><code>-wrap</code></td>
+<td>Long lines wrap instead of scrolling</td>
+</tr>
+<tr>
+<td><code>-linenums</code></td>
+<td>Adds line numbers</td>
+</tr>
+<tr>
+<td><code>-nocolor</code></td>
+<td>No syntax highlighting</td>
+</tr>
+<tr>
+<td><code>-notab</code></td>
+<td>Hides the language tab</td>
+</tr>
+<tr>
+<td><code>-nocode</code></td>
+<td>No highlighting, no tab, not copyable</td>
+</tr>
+</tbody>
+</table></div>
+
+<pre><code class="language-markdown">```bash-nocopy
+git add .
+git commit -m &quot;describe what changed&quot;
+git push
+```
+</code></pre>
+
+<h2 id="run-a-command-for-the-learner">Run a command for the learner</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@[Label](`command`){PowerShell}</code></td>
+<td>Runs a PowerShell command in the background</td>
+</tr>
+<tr>
+<td><code>@[Label](`command`){PowerShell visible}</code></td>
+<td>Runs it in a visible window</td>
+</tr>
+<tr>
+<td><code>@[Label](`command`){Shell}</code></td>
+<td>Runs a command shell command in the background</td>
+</tr>
+<tr>
+<td><code>@[Label](`command`){Shell visible}</code></td>
+<td>Runs it in a visible window</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>These need integration services on the machine. Check with the lab admin before you rely on them, and use them sparingly: learners should still know how to open a terminal.</p>
+
+<h2 id="callout-blocks">Callout blocks</h2>
+
+<pre><code class="language-markdown">&gt; [!Note] Always visible.
+&gt; [!Knowledge] Collapses after 4 lines, with a &quot;more&quot; link.
+&gt; [!Alert] Important. Shown inline, hard to miss.
+&gt; [!Hint] A nudge.
+&gt; [!Help] Extra help.
+</code></pre>
+
+<p>For an <strong>expandable</strong> version, use <code>[+Note]</code>, <code>[+Knowledge]</code>, <code>[+Alert]</code>, <code>[+Hint]</code> or <code>[+Help]</code>. The first line shows and the rest stays hidden until the learner expands it:</p>
+
+<pre><code class="language-markdown">&gt; [+Hint] Stuck? Expand for the answer.
+&gt;
+&gt; Run git status to see which files changed.
+</code></pre>
+
+<h2 id="links-images-and-video">Links, images and video</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[text](url)</code></td>
+<td>Opens in a new window</td>
+</tr>
+<tr>
+<td><code>^[text](url)</code></td>
+<td>Opens in a <strong>dialog</strong> over the lab</td>
+</tr>
+<tr>
+<td><code>&lt;[text](url)</code></td>
+<td>Opens in the lab’s portal window (on machine labs, a new window)</td>
+</tr>
+<tr>
+<td><code>!IMAGE[alt text](url "title")</code></td>
+<td>An image</td>
+</tr>
+<tr>
+<td><code>!IMAGE[alt text](url){600}</code></td>
+<td>An image 600 pixels wide (<code>{600x400}</code> sets both)</td>
+</tr>
+<tr>
+<td><code>!video[text](youtube-url)</code></td>
+<td>An embedded YouTube video. Keep it to 30 to 60 seconds</td>
+</tr>
+<tr>
+<td><code>help[text](url)</code>, <code>hint[text](url)</code>, <code>knowledge[text](url)</code></td>
+<td>Links styled with an icon</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="reuse-a-block-on-every-page">Reuse a block on every page</h2>
+
+<p>Define the content once on page 1, then drop it in wherever you need it. Handy for a standard save reminder or an instance ID footer on every page.</p>
+
+<pre><code class="language-markdown">&gt;[save-reminder]: **Before you leave this lab:** commit and push to GitHub, then check the commit is there.
+
+!instructions[][save-reminder]
+</code></pre>
+
+<p>To pull in Markdown hosted on GitHub, use <code>[!include [label](raw-github-url)]</code>. The lab shows whatever is at that URL, so a change there changes the lab.</p>
+
+<h2 id="what-skillable-doesn-t-render">What Skillable doesn’t render</h2>
+
+<p>Some things that work on GitHub or in VS Code won’t work in a lab:</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Doesn’t work</th>
+<th>Use instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mermaid diagrams</td>
+<td>An image of the diagram (<code>!IMAGE[...]</code>)</td>
+</tr>
+<tr>
+<td>HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> collapsibles</td>
+<td>An expandable callout, such as <code>&gt; [+Hint]</code></td>
+</tr>
+<tr>
+<td>GitHub-style check boxes, <code>- [ ]</code></td>
+<td><code>- []</code>, with no space</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="replacement-tokens-and-variables">Replacement tokens and variables</h2>
+
+<p>Tokens are filled in when the learner launches the lab.</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Gives you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@lab.User.FirstName</code></td>
+<td>The learner’s first name</td>
+</tr>
+<tr>
+<td><code>@lab.User.Email</code></td>
+<td>The learner’s email</td>
+</tr>
+<tr>
+<td><code>@lab.LabInstance.Id</code></td>
+<td>This lab run’s ID. Put it in a footer</td>
+</tr>
+<tr>
+<td><code>@lab.VirtualMachine(Name).Username</code> and <code>.Password</code></td>
+<td>Sign-in details for a machine</td>
+</tr>
+<tr>
+<td><code>@lab.CtrlAltDelete</code></td>
+<td>Sends Ctrl+Alt+Del to the machine</td>
+</tr>
+<tr>
+<td><code>@lab.KeyCombo(label)[codes]</code></td>
+<td>A button that sends a key combination. Test it before publishing</td>
+</tr>
+<tr>
+<td><code>@lab.Activity(Name)</code></td>
+<td>Places an activity (a question or check)</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>Values learners enter</strong></p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Token</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@lab.TextBox(name)</code></td>
+<td>A box the learner types a value into</td>
+</tr>
+<tr>
+<td><code>@lab.Variable(name)</code></td>
+<td>Shows that value later in the lab</td>
+</tr>
+<tr>
+<td><code>@lab.MaskedTextBox(name)</code></td>
+<td>Hides what’s typed. It isn’t encrypted, so <strong>never use it for real secrets</strong></td>
+</tr>
+<tr>
+<td><code>@lab.DropDownList(name)[a,b,c]</code></td>
+<td>A dropdown the learner chooses from</td>
+</tr>
+<tr>
+<td><code>@lab.EssayTextBox(name)</code></td>
+<td>A larger box, up to 5,000 characters</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>Cloud labs</strong> have their own tokens for each learner’s cloud sign-in details. See <a href="../smes/cloud-labs.html#show-sign-in-details-in-the-instructions">Cloud services, access and credentials</a>.</p>
+
+<p>These tokens are not environment variables. Environment variables live inside the machine, in the terminal. See the <a href="../instructors/faq.html#environment-variables">Instructor FAQ</a>.</p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

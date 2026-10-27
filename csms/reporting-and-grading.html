@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporting, grading and client updates | Skillable at GA</title>
+<meta name="description" content="What Skillable can tell you about learners, how grading works, and what to say to clients when something goes wrong.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_arch_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Reporting, grading and client updates</h1>
+    <p class="dek">What Skillable can tell you about learners, how grading works, and what to say to clients when something goes wrong.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>CSMs and program ops</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="what-you-can-report-on">What you can report on</h2>
+
+<p>Skillable records every <strong>lab instance</strong> (each individual launch). For each one you can see:</p>
+
+<ul>
+<li>Learner, class and lab</li>
+<li>How long the lab was open</li>
+<li><strong>Completion status:</strong> complete, incomplete or canceled</li>
+<li><strong>Score</strong> and pass/fail, where the lab is scored</li>
+<li>Answers given to questions, and the correct answers</li>
+<li>Output captured by automated checks (where the lab is set to show results in reports)</li>
+</ul>
+
+<p>TMS also tracks <strong>progress</strong> within a lab, based on how many task check boxes the learner has ticked.</p>
+
+<h3 id="how-to-pull-it">How to pull it</h3>
+
+<p>Use <strong>Admin</strong>, then <strong>Labs</strong>, then <strong>Find Lab Instances</strong> (or <strong>Exam Lab Instances</strong> for scored labs). Filter by class, and <strong>save the search</strong> as a default view so weekly reporting is one click. Select <strong>Details</strong> on a lab for question-by-question results.</p>
+
+<p class="doclink"><span>Step by step in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/viewing-lab-instances-2" target="_blank" rel="noopener">Viewing lab instances</a></p>
+
+<figure class="shot" data-shot="tms-find-lab-instances"><img src="../assets/screens/tms-find-lab-instances.png" alt="Find Lab Instances in Site Administration with filters and results"><div class="shot-ph"><strong>Screenshot to add</strong><span>Find Lab Instances in Site Administration with filters and results</span><code>assets/screens/tms-find-lab-instances.png</code></div><figcaption>Site Administration, Labs tile, Find Lab Instances: filter and save the search.</figcaption></figure>
+<p><strong>Access:</strong> CSMs are expected to have the <strong>Operations Manager</strong> role, which also lets you enroll last-minute learners and connect them to classes. If you can’t see the Labs tile for reporting, ask the lab admin to update your role.</p>
+
+<h2 id="useful-weekly-signals-for-client-updates">Useful weekly signals for client updates</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Where</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Labs launched vs enrolled learners</td>
+<td>Find Lab Instances, filtered by class</td>
+<td>Attendance in practice</td>
+</tr>
+<tr>
+<td>Completion status</td>
+<td>Same</td>
+<td>Who finished vs who left early</td>
+</tr>
+<tr>
+<td>Time in lab</td>
+<td>Same</td>
+<td>Engagement depth</td>
+</tr>
+<tr>
+<td>Canceled labs</td>
+<td>Completion status = canceled</td>
+<td>Possible frustration or lost work. Follow up</td>
+</tr>
+<tr>
+<td>Scores (if used)</td>
+<td>Exam Lab Instances</td>
+<td>Skill attainment</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="callout warn">
+<p><span class="callout-title">Caution</span></p>
+
+<p>“Time in lab” includes idle time until timeout. Treat it as a rough signal, not a metric to put in front of a client on its own.</p>
+
+</div>
+
+<h2 id="how-grading-works">How grading works</h2>
+
+<p>So you can explain it to a client:</p>
+
+<ul>
+<li>Grading in Skillable is built from <strong>activities</strong> inside the lab: questions (multiple choice, short answer) and <strong>automated checks</strong> that inspect the learner’s environment.</li>
+<li>The LED specifies which activities count, their point values and the <strong>passing score</strong>. The lab admin configures them in Studio.</li>
+<li>Checks can award <strong>partial credit</strong>.</li>
+<li>Learners may see nothing, their score only, or a full breakdown, depending on how the lab is set.</li>
+<li>Labs can be <strong>practice</strong> (unscored, retries allowed) or <strong>assessment</strong> (scored, sometimes only on submission).</li>
+</ul>
+
+<p><strong>Scoring is decided per program</strong> by the client and the LED. Some programs score labs; others use them purely for practice.</p>
+
+<h2 id="when-something-goes-wrong">When something goes wrong</h2>
+
+<p><strong>Triage</strong></p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>Route to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can’t sign in</td>
+<td>Wrong email, not enrolled, password</td>
+<td>CSM (check enrollment)</td>
+</tr>
+<tr>
+<td>Class not visible</td>
+<td>Enrollment status or class not started</td>
+<td>CSM (check enrollment)</td>
+</tr>
+<tr>
+<td>Lab won’t launch for one person</td>
+<td>Network / browser / pop-ups</td>
+<td>Instructor → tech check</td>
+</tr>
+<tr>
+<td>Lab won’t launch for everyone</td>
+<td>Platform issue</td>
+<td>Check <a data-link="status"></a> → Lab admin</td>
+</tr>
+<tr>
+<td>Tool missing or broken on VM</td>
+<td>Image issue</td>
+<td>Lab admin</td>
+</tr>
+<tr>
+<td>Learner lost work</td>
+<td>Exited without pushing / canceled</td>
+<td>Instructor; re-clone from GitHub</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>Client messaging principles</strong></p>
+
+<ul>
+<li>Lead with what we’re doing and when the learner will be back working.</li>
+<li>Lost-work incidents: own the gap in onboarding, then point to the push-to-GitHub routine as the fix going forward.</li>
+<li>Platform outages: during the lab admin’s hours, route through GA. After hours or for deliveries in other time zones, instructors and CSMs email GA’s Skillable priority support address (see <a href="../instructors/troubleshooting.html#who-to-contact">Who to contact</a>). GA has Skillable’s premium support tier, so tickets are picked up right away.</li>
+</ul>
+
+<h2 id="related-pages">Related pages</h2>
+
+<div class="cards">
+<a class="card" href="../csms/manage-enrollments.html"><h3 id="enroll-and-manage-learners">Enroll and manage learners</h3><p>Adding, removing and moving learners in TMS.</p></a>
+<a class="card" href="../get-started/who-does-what.html"><h3 id="who-does-what">Who does what</h3><p>Ownership across the program.</p></a>
+</div>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

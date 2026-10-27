@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instructor FAQ | Skillable at GA</title>
+<meta name="description" content="Quick answers about non-persistent labs, environment variables, saving and timeouts. Select a question to open it.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_arch_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Instructor FAQ</h1>
+    <p class="dek">Quick answers about non-persistent labs, environment variables, saving and timeouts. Select a question to open it.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Instructors and TAs</dd></div>
+    <div><dt>Time</dt><dd>Quick reference</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>Labs aren’t persistent by default, which is behind most of the questions below. Each answer links to the page with the full detail.</p>
+
+<h2 id="the-basics">The basics</h2>
+
+<div class="faq">
+<details id="is-the-machine-theirs"><summary>Is the lab machine the learner’s to keep?</summary>
+<div class="answer">
+<p>Not by default. Every launch is a fresh copy of an image GA built, and the copy is deleted when the lab ends.</p>
+
+<p>Some programs use saveable labs for a period, so a machine can be paused and resumed. Which one applies is a program decision. Ask the program’s CSM.</p>
+
+<p>A quick test: if the Exit menu only shows <strong>End</strong>, that lab can’t be saved.</p>
+
+</div>
+
+</details>
+
+<details><summary>What’s the single most important habit?</summary>
+<div class="answer">
+<p>Commit and push to GitHub before leaving any lab, every time.</p>
+
+</div>
+
+</details>
+
+<details><summary>Do learners need to install anything?</summary>
+<div class="answer">
+<p>No. They need a modern browser, a network that allows Skillable, and pop-ups allowed for the TMS site.</p>
+
+</div>
+
+</details>
+
+<details><summary>Can I see learners’ screens?</summary>
+<div class="answer">
+<p>Yes. Open <strong>Monitor Labs</strong> from your Class page to see every running lab, then use <strong>Monitor Student</strong> to watch or <strong>Take Control</strong> to work in their lab. Steps are on <a href="../instructors/during-class.html">During class</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>Does launching a test lab affect learners?</summary>
+<div class="answer">
+<p>No. Your test lab is ephemeral too, so changes you make never reach learners. Report image problems to the lab admin.</p>
+
+<p>Instructors can hold up to <strong>5 saved labs</strong> (7-day save) for demos and prep.</p>
+
+</div>
+
+</details>
+
+</div>
+
+<h2 id="saving-ending-and-timeouts">Saving, ending and timeouts</h2>
+
+<div class="faq">
+<details><summary>What’s the difference between Save and Close, End and Cancel?</summary>
+<div class="answer">
+<ul>
+<li><strong>Save and Close</strong> keeps the machine so the learner can resume later. It only appears on labs where saving is turned on.</li>
+<li><strong>End</strong> finishes the lab and deletes the machine.</li>
+<li><strong>Cancel</strong> throws the work away. The next launch starts fresh.</li>
+</ul>
+
+</div>
+
+</details>
+
+<details><summary>A learner clicked Cancel. Can we get the work back?</summary>
+<div class="answer">
+<p>No. The instance is gone. Have them re-clone from GitHub, then re-run their setup.</p>
+
+</div>
+
+</details>
+
+<details><summary>A learner closed the lab tab. Is the lab still running?</summary>
+<div class="answer">
+<p>Yes. By default it keeps running for 60 minutes after the window closes. They can relaunch from TMS to reconnect.</p>
+
+</div>
+
+</details>
+
+<details><summary>How long before a lab times out?</summary>
+<div class="answer">
+<p>Lab duration is set per lab. The defaults for the other timeouts are a <strong>15-minute idle timeout</strong> (warns, then shuts down) and a <strong>60-minute closed-window timeout</strong>. Programs can ask for different values.</p>
+
+<p>Tell learners at the start of each session how long the lab runs and remind them to respond to timeout warnings. See the full table on <a href="../instructors/how-labs-work.html#timeouts-and-limits">How labs work</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>How many saved labs can people hold, and for how long?</summary>
+<div class="answer">
+<p>Learners can hold <strong>2</strong> saved labs and instructors <strong>5</strong>. Save periods for instructor-led classes are typically 7 days. Saves expire, and reopening and saving again pushes the date out. GA can ask Skillable for different periods.</p>
+
+</div>
+
+</details>
+
+<details><summary>Will Skillable save the lab automatically if a learner goes quiet?</summary>
+<div class="answer">
+<p>There is some auto-save behavior for inactive labs, but don’t rely on it. It depends on lab settings and timing, and an active lab that simply runs out of time won’t auto-save. GitHub is the backup plan.</p>
+
+</div>
+
+</details>
+
+</div>
+
+<h2 id="environment-variables-and-what-gets-lost">Environment variables and what gets lost</h2>
+
+<p>An <strong>environment variable</strong> is a named setting inside the lab machine, such as an API key, that tools can read. Because every launch starts from a fresh copy of the image, anything a learner sets by hand lives only as long as that terminal or that machine does.</p>
+
+<div class="faq">
+<details id="environment-variables"><summary>I set an environment variable (or an API key) and now it’s gone. Why?</summary>
+<div class="answer">
+<p>Two common reasons.</p>
+
+<ol>
+<li><strong>It was set in a terminal.</strong> A variable set by hand in a terminal normally lasts only for that terminal session. A new terminal may not have it.</li>
+<li><strong>The machine is a fresh copy.</strong> Each launch starts from the original image. Files, installed packages and keys set in the shell from a previous machine don’t carry over. Only what is built into the image, or injected by GA at launch, is there.</li>
+</ol>
+
+<p>The fix is to set it again at the start of each fresh session. If every learner needs it, ask the lab admin whether it should be built in or injected at launch. See <a href="../lab-authors/request-a-change.html">Request a lab change</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>Which variables does GA set for learners automatically?</summary>
+<div class="answer">
+<p>Keys that GA injects at launch (for example, an API key for a coding assistant) are set automatically as environment variables in the terminal. Learners never see or handle them, and nothing is distributed to them.</p>
+
+<p>Which ones a program has depends on the program. Ask the lab admin.</p>
+
+</div>
+
+</details>
+
+<details><summary>Where should a learner keep their own keys and secrets?</summary>
+<div class="answer">
+<p><strong>Never commit secrets to GitHub.</strong> Keys go in environment variables, or in a <code>.env</code> file that is listed in <code>.gitignore</code>.</p>
+
+<p>Because a <code>.env</code> file is deliberately kept off GitHub, it won’t exist on a fresh machine. Learners re-create it, or re-set the variable, at the start of each fresh session. On a saved lab it stays until the save expires.</p>
+
+</div>
+
+</details>
+
+<details><summary>Is this the same as the @lab.… placeholders in lab instructions?</summary>
+<div class="answer">
+<p>No. Tokens such as <code>@lab.User.FirstName</code> are placeholders in the lab <strong>instructions</strong>, filled in when the learner launches the lab. Variables like <code>@lab.TextBox(name)</code> collect a value from the learner inside the instructions. Environment variables live <strong>inside the machine</strong>, in the terminal. See the <a href="../lab-authors/markdown-reference.html#replacement-tokens-and-variables">authoring guide</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>A tool asks learners to sign in instead of using the preset key. What now?</summary>
+<div class="answer">
+<p>The key is probably not present in that session. Have the learner open a new terminal and try again. If it persists, relaunch the lab, then contact the lab admin.</p>
+
+</div>
+
+</details>
+
+<details><summary>A tool stops with a usage or limit error.</summary>
+<div class="answer">
+<p>The program’s API usage limit has been reached. Contact the lab admin.</p>
+
+</div>
+
+</details>
+
+<details><summary><code>git push</code> asks for credentials or fails.</summary>
+<div class="answer">
+<p>The learner isn’t signed in to GitHub on this machine. Run <code>gh auth login</code>. Sign-ins don’t carry over to a fresh machine, so this is part of every fresh-session routine.</p>
+
+</div>
+
+</details>
+
+</div>
+
+<h2 id="tools-and-packages">Tools and packages</h2>
+
+<div class="faq">
+<details><summary>A package is missing after the learner relaunched.</summary>
+<div class="answer">
+<p>If it isn’t in the base image, or was installed on a previous fresh machine, it won’t be there. Install it again (for example with <code>pip install</code>). If every learner needs it, tell the lab admin so it can be built into the image. New tools and packages need about <strong>3 days’ notice</strong>: see <a href="../lab-authors/request-a-change.html">Request a lab change</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>A tool is missing, or the wrong version, for everyone.</summary>
+<div class="answer">
+<p>That’s a base image issue, so contact the lab admin. Don’t have learners install workarounds unless you’re told to. The next fresh machine won’t have the workaround, and it may hide a problem every learner will hit.</p>
+
+</div>
+
+</details>
+
+</div>
+
+<h2 id="in-class">In class</h2>
+
+<div class="faq">
+<details><summary>What should I tell learners at the start and end of every session?</summary>
+<div class="answer">
+<p><strong>Start:</strong> name the exact lab to launch, then show the start-up routine (clone or pull, sign in, set keys).</p>
+
+<p><strong>End (15 minutes before):</strong> commit, push and confirm on GitHub. Then Save and Close <strong>or</strong> End, as the program specifies.</p>
+
+<p>More in <a href="../instructors/during-class.html#your-session-rhythm">During class</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>A learner lost their work. What now?</summary>
+<div class="answer">
+<p>If they pushed to GitHub, they <code>git clone</code> (fresh machine) or <code>git pull</code> and carry on. If they didn’t, the work on the machine can’t be recovered after End, Cancel or an expired save. Use it as a teaching moment for the whole class, not just the learner.</p>
+
+</div>
+
+</details>
+
+<details><summary>Who do I contact?</summary>
+<div class="answer">
+<p>GA first: the program’s <strong>CSM</strong> for access, the <strong>The lab admin</strong> for anything about the lab environment. For platform problems, or when the lab admin isn’t available, email GA’s Skillable priority support address, <a data-link="supportEmail"></a>. Only open a ticket on Skillable’s site if you can’t reach anyone. See <a href="../instructors/troubleshooting.html#who-to-contact">Who to contact</a>.</p>
+
+</div>
+
+</details>
+
+<details><summary>Where’s Skillable’s own documentation?</summary>
+<div class="answer">
+<p><a data-link="docs"></a>. Platform status is at <a data-link="status"></a>.</p>
+
+</div>
+
+</details>
+
+</div>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

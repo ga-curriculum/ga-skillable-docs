@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test a lab before learners do | Skillable at GA</title>
+<meta name="description" content="What to check, how to walk a lab end to end, and how to report what you find.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_whorl_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Test a lab before learners do</h1>
+    <p class="dek">What to check, how to walk a lab end to end, and how to report what you find.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Contractors, LEDs, SMEs and instructors</dd></div>
+    <div><dt>Time</dt><dd>6 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>Testing a lab means launching it the way a learner would and working through every page. Skillable’s special syntax only renders inside a real lab, not in GitHub or VS Code previews, so a real launch is the only way to see what learners will see.</p>
+
+<p>Never signed in to TMS? Start with <a href="../get-started/sign-in.html">Sign in to TMS</a>. Contractors: The lab admin will tell you which class and lab to test.</p>
+
+<h2 id="before-you-start">Before you start</h2>
+
+<ul>
+<li>Know which <strong>program, class and lab</strong> you’re testing. The lab admin or the LED who asked you will tell you.</li>
+<li>Have a place to take notes and screenshots. The lab machine is deleted when the lab ends.</li>
+<li>Remember that <strong>your test lab is disposable</strong>. Changes you make in it never reach learners.</li>
+</ul>
+
+<h2 id="walk-the-lab">Walk the lab</h2>
+
+<p>Launch the lab and wait for the machine to start (a minute or two). Then work through it page by page and tick things off as you go.</p>
+
+<ul class="checklist">
+<li><label><input type="checkbox"><span>Walk the setup steps exactly as written.</span></label></li>
+<li><label><input type="checkbox"><span>Run the tools the lab uses. Note anything missing or the wrong version.</span></label></li>
+<li><label><input type="checkbox"><span>Each page covers one task and ends with a clear <strong>Next</strong>.</span></label></li>
+<li><label><input type="checkbox"><span>Click-to-type and click-to-copy text works.</span></label></li>
+<li><label><input type="checkbox"><span>Every page that ends a session includes the save/push alert.</span></label></li>
+<li><label><input type="checkbox"><span>Spoilers and answers sit inside expandable hints.</span></label></li>
+<li><label><input type="checkbox"><span>Check and Evaluate buttons work, and a wrong answer tells the learner what to fix.</span></label></li>
+<li><label><input type="checkbox"><span>The lab instance ID is visible in a footer.</span></label></li>
+<li><label><input type="checkbox"><span>You’ve noted the lab duration and timeouts, so you can confirm they match what the program expects.</span></label></li>
+</ul>
+
+<h2 id="report-what-you-find">Report what you find</h2>
+
+<p>Send your notes to the right person.</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>What you found</th>
+<th>Send it to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong or unclear instructions</td>
+<td>The <strong>LED or SME</strong> who owns the course. They send the fix to the lab admin.</td>
+</tr>
+<tr>
+<td>A missing tool, a broken machine, wrong lab settings</td>
+<td>The <strong>Lab admin</strong></td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Include:</p>
+
+<ul>
+<li>Program and lab name, and the page or step</li>
+<li>What you expected and what happened</li>
+<li>A screenshot</li>
+<li>The <strong>lab instance ID</strong>, from the lab’s Help panel. Take a screenshot while the lab is still open.</li>
+</ul>
+
+<figure class="shot" data-shot="lab-help-panel"><img src="../assets/screens/lab-help-panel.png" alt="The lab Help panel showing the lab instance ID"><div class="shot-ph"><strong>Screenshot to add</strong><span>The lab Help panel showing the lab instance ID</span><code>assets/screens/lab-help-panel.png</code></div><figcaption>The Help panel shows the lab instance ID. Include it in every support ticket.</figcaption></figure>
+<p>For instruction changes, send the <strong>updated Markdown</strong> rather than a description of the edit. The full process is on <a href="../lab-authors/request-a-change.html">Request a lab change</a>.</p>
+
+<div class="callout warn">
+<p><strong>Don’t edit instructions in a test lab and expect the change to stick.</strong> Test sessions are disposable too.</p>
+
+</div>
+
+<h2 id="related-pages">Related pages</h2>
+
+<div class="cards">
+<a class="card" href="../lab-authors/writing-instructions.html"><h3 id="writing-lab-instructions">Writing lab instructions</h3><p>The conventions you’re checking against.</p></a>
+<a class="card" href="../lab-authors/request-a-change.html"><h3 id="request-a-lab-change">Request a lab change</h3><p>Notice periods and what to include.</p></a>
+<a class="card" href="../instructors/troubleshooting.html"><h3 id="when-a-lab-misbehaves">When a lab misbehaves</h3><p>Fixes for black screens, lag and launch problems.</p></a>
+</div>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Write the tech requirements | Skillable at GA</title>
+<meta name="description" content="The document the lab admin uses to build the lab image and any cloud services. If it’s not in here, it won’t be on the machine.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_loop_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Write the tech requirements</h1>
+    <p class="dek">The document the lab admin uses to build the lab image and any cloud services. If it’s not in here, it won’t be on the machine.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Subject matter experts</dd></div>
+    <div><dt>Time</dt><dd>8 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<p>Use whatever format your team already uses. Just make sure it answers everything below. Send it to the lab admin with the lab instructions, at least <strong>14 days</strong> before the first session. A new machine image needs at least 5 days of that, and cloud services can take 1 to 2 weeks. See <a href="../lab-authors/how-a-lab-gets-built.html#lead-times">lead times</a>.</p>
+
+<h2 id="what-to-include">What to include</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>What to include</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operating system and shell</strong></td>
+<td>Windows or Linux, and the shell learners use (PowerShell, Bash)</td>
+<td>Decides the image, and the language tag on every code block</td>
+</tr>
+<tr>
+<td><strong>Languages</strong></td>
+<td>Each language with a minimum and an expected version. Any command differences (for example <code>python</code> versus <code>py</code>)</td>
+<td>Learners copy commands exactly. One wrong command name stops a lab</td>
+</tr>
+<tr>
+<td><strong>Packages</strong></td>
+<td>A full list with <strong>exact pinned versions</strong>, which sessions use each, and how they’re installed (globally, or in a virtual environment)</td>
+<td>Pinned versions mean every learner gets the same behavior. Unpinned ones change under you</td>
+</tr>
+<tr>
+<td><strong>Tools on the machine</strong></td>
+<td>Editor, Git, command-line tools, AI tools and how each one signs in, required extensions</td>
+<td>Anything missing has to be installed by learners every fresh session</td>
+</tr>
+<tr>
+<td><strong>Not available</strong></td>
+<td>Tools learners might expect that won’t be there, and what to use instead</td>
+<td>Saves instructors from live workarounds</td>
+</tr>
+<tr>
+<td><strong>Cloud services</strong></td>
+<td>Each service, its type and tier, which labs use it, the region, and whether it’s shared or one per learner</td>
+<td>The lab admin provisions these. See <a href="../smes/cloud-labs.html">Cloud services, access and credentials</a></td>
+</tr>
+<tr>
+<td><strong>Access and roles</strong></td>
+<td>Who needs which role, on what, and why: learners, instructors and the setup account</td>
+<td>Too little access breaks a lab. Too much lets learners delete shared work</td>
+</tr>
+<tr>
+<td><strong>Network access</strong></td>
+<td>Every outside domain the labs reach, and what needs it</td>
+<td>A blocked domain is the most common delivery-day failure</td>
+</tr>
+<tr>
+<td><strong>Credentials and environment variables</strong></td>
+<td>Every key and variable: who needs it, which sessions, and how it reaches the machine</td>
+<td>Credentials must never be shared in chat or on slides</td>
+</tr>
+<tr>
+<td><strong>Session by session</strong></td>
+<td>What each session needs that the one before didn’t</td>
+<td>Lets Lab admin and instructors check readiness day by day</td>
+</tr>
+<tr>
+<td><strong>Test status</strong></td>
+<td>Which labs you’ve tested in a real Skillable launch, and which are untested</td>
+<td>Untested requirements are guesses. Mark them clearly</td>
+</tr>
+<tr>
+<td><strong>Open questions</strong></td>
+<td>Anything undecided, with who decides</td>
+<td>Gets decisions made before the build, not during class</td>
+</tr>
+<tr>
+<td><strong>Costs</strong></td>
+<td>What bills by the hour or per use, and how it scales with headcount</td>
+<td>Cloud services cost money even when nobody is using them</td>
+</tr>
+<tr>
+<td><strong>Cleanup</strong></td>
+<td>What to delete, revoke or rotate when the program ends</td>
+<td>Stops costs and closes access once the program ends</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="tips-from-past-programs">Tips from past programs</h2>
+
+<ul>
+<li><strong>Pin exact versions</strong> (<code>==1.2.3</code>, not <code>&gt;=1.2</code>) for anything a lab depends on. Use ranges only where any recent version genuinely works.</li>
+<li><strong>Test in Skillable, not just on your own machine</strong> or in a plain cloud account. Images and network rules differ.</li>
+<li><strong>Test with a learner account.</strong> Admin and instructor accounts can do things learners can’t, which hides missing permissions.</li>
+<li><strong>Name roles exactly.</strong> Cloud providers rename roles. Give the role’s ID as well as its name.</li>
+<li><strong>Say what’s <em>not</em> used.</strong> If a lesson mentions a tool learners won’t install, list it, so nobody adds it to the image by mistake.</li>
+<li><strong>Keep the requirements with the course,</strong> and update them when a lab changes.</li>
+</ul>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How labs work: the mental model | Skillable at GA</title>
+<meta name="description" content="The mental model, settings and routines every instructor needs before teaching on Skillable.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_arch_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>How labs work: the mental model</h1>
+    <p class="dek">The mental model, settings and routines every instructor needs before teaching on Skillable.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>Instructors, SMEs and TAs delivering any GA program on Skillable</dd></div>
+    <div><dt>Time</dt><dd>10 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="the-mental-model-images-not-machines">The mental model: images, not machines</h2>
+
+<p>A Skillable lab is not “a student’s computer in the cloud.” It’s a <strong>template</strong>.</p>
+
+<ul>
+<li>GA builds and saves a <strong>VM image</strong> (the operating system, tools, settings) in Skillable Studio.</li>
+<li>Every time a student <strong>launches</strong> a lab, Skillable creates a <strong>fresh copy</strong> of that image just for them. This is called a <strong>lab instance</strong>.</li>
+<li>When the lab instance ends, the copy is <strong>deleted</strong>. The next launch is another fresh copy of the original image.</li>
+</ul>
+
+<p>So by default:</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Survives</th>
+<th>Does not survive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The original image GA built</td>
+<td>Files the student created</td>
+</tr>
+<tr>
+<td>Anything pushed to GitHub</td>
+<td>Installed packages, config changes</td>
+</tr>
+<tr>
+<td>The student’s TMS account and progress record</td>
+<td>Logged-in sessions (<code>gh auth</code>, API keys set in the shell, browser logins)</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="callout tip">
+<p><strong>The one-line version for students:</strong> <em>the machine is borrowed, your code is yours only once it’s on GitHub.</em></p>
+
+</div>
+
+<h2 id="ephemeral-vs-saved-labs">Ephemeral vs saved labs</h2>
+
+<p>Skillable supports two behaviors, set per lab by GA.</p>
+
+<p><strong>Ephemeral (end-only).</strong> The Exit menu shows only <em>End</em>. Closing the lab destroys the instance. The next session is a clean machine.</p>
+
+<p><strong>Saveable.</strong> The Exit menu shows <em>Save and Close</em>. The instance is paused and kept until a save expiry date shown to the student. Relaunching resumes where they left off and doesn’t count as a new launch.</p>
+
+<p>Points to know about saved labs:</p>
+
+<ul>
+<li>Saves <strong>expire</strong>. The student sees the expiry date when saving. Reopening and saving again pushes the date out.</li>
+<li>Standard Skillable limits: students can hold <strong>2 saved labs</strong>; instructors <strong>5</strong>. Save periods for instructor-led classes are typically 7 days, and GA can ask Skillable for different periods.</li>
+<li><strong>Cancel</strong> is not Save. Cancel throws the work away.</li>
+</ul>
+
+<p>Which behavior a lab uses is a program decision. Ask the program’s CSM.</p>
+
+<h2 id="timeouts-and-limits">Timeouts and limits</h2>
+
+<p>Every lab has settings GA configures in Studio. The timeouts below use Skillable’s defaults unless the delivery team asks for something different. They can be configured to whatever a program needs.</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lab duration</strong></td>
+<td>How long one launch can run</td>
+<td>Set per lab</td>
+</tr>
+<tr>
+<td><strong>Idle timeout</strong></td>
+<td>Warns or disconnects after no activity</td>
+<td>Default: 15 minutes</td>
+</tr>
+<tr>
+<td><strong>Closed-window timeout</strong></td>
+<td>Shuts the lab down after the lab window is closed</td>
+<td>Default: 60 minutes</td>
+</tr>
+<tr>
+<td><strong>Extension</strong></td>
+<td>Student can add time when warned</td>
+<td>Set per lab</td>
+</tr>
+<tr>
+<td><strong>Launch limit</strong></td>
+<td>How many times a lab can be launched</td>
+<td>Set per course</td>
+</tr>
+<tr>
+<td><strong>Access window</strong></td>
+<td>When students can launch at all</td>
+<td>Class start through any post-class access period, set per program</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>What to do:</strong> at the start of each session, tell students how long the lab runs and remind them to respond to timeout warnings. A student who ignores the warning can lose an unsaved lab.</p>
+
+<figure class="shot" data-shot="lab-timeout-warning"><img src="../assets/screens/lab-timeout-warning.png" alt="The idle timeout warning in a lab"><div class="shot-ph"><strong>Screenshot to add</strong><span>The idle timeout warning in a lab</span><code>assets/screens/lab-timeout-warning.png</code></div><figcaption>The idle timeout warning. Respond to it or the lab shuts down.</figcaption></figure>
+<h2 id="the-save-your-work-routine">The save-your-work routine</h2>
+
+<p>Make this a ritual, not a reminder. Teach it on day one.</p>
+
+<p><strong>Start of session</strong></p>
+
+<pre><code class="language-bash">git clone &lt;repo-url&gt;      # on a fresh machine
+# or
+git pull                  # on a resumed machine
+</code></pre>
+
+<p><strong>Every natural break</strong> (lab step done, before lunch, before a demo)</p>
+
+<pre><code class="language-bash">git add .
+git commit -m &quot;describe what changed&quot;
+git push
+</code></pre>
+
+<p><strong>End of session</strong></p>
+
+<ol>
+<li>Commit and push.</li>
+<li>Confirm the commit is visible on GitHub in the browser.</li>
+<li>Then use the Exit menu.</li>
+</ol>
+
+<p><strong>Also redo each fresh session:</strong> sign in to GitHub CLI (<code>gh auth login</code>), re-set any API keys you added yourself (keys GA injects at launch are set automatically), and reinstall any extra packages that aren’t in the base image.</p>
+
+<div class="callout warn">
+<p><strong>Never commit secrets.</strong> Keys go in environment variables or a <code>.env</code> file listed in <code>.gitignore</code>. More on this in the <a href="../instructors/faq.html#environment-variables">FAQ</a>.</p>
+
+</div>
+
+<h2 id="what-happens-if">What happens if…</h2>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Outcome</th>
+<th>What to tell the student</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Closes the lab tab</td>
+<td>Instance keeps running (60 minutes by default)</td>
+<td>Relaunch from TMS to reconnect</td>
+</tr>
+<tr>
+<td>Walks away</td>
+<td>Idle timeout warns, then shuts down</td>
+<td>Respond to the warning or push before stepping away</td>
+</tr>
+<tr>
+<td>Power / Wi-Fi loss</td>
+<td>Treated as idle</td>
+<td>Reconnect fast; work since the last push is at risk</td>
+</tr>
+<tr>
+<td>Clicks <em>Cancel</em> by mistake</td>
+<td>Work on the machine is gone</td>
+<td>Re-clone from GitHub</td>
+</tr>
+<tr>
+<td>Lab timer runs out</td>
+<td>Lab ends</td>
+<td>Extend when warned; push regularly</td>
+</tr>
+<tr>
+<td>Saved lab expires</td>
+<td>Saved instance is deleted</td>
+<td>Reopen and re-save before expiry</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Skillable has some auto-save behavior when a lab has been inactive for a while, but it’s not something to rely on. It depends on lab settings and timing, and an active lab that simply runs out of time won’t auto-save. <strong>GitHub is the backup plan.</strong></p>
+
+<h2 id="where-to-go-next">Where to go next</h2>
+
+<div class="cards">
+<a class="card" href="../instructors/faq.html"><h3 id="instructor-faq">Instructor FAQ</h3><p>Quick answers, including environment variables.</p></a>
+<a class="card" href="../instructors/during-class.html"><h3 id="during-class">During class</h3><p>Monitor Labs and Take Control: how you help in the moment.</p></a>
+<a class="card" href="../instructors/troubleshooting.html"><h3 id="when-something-goes-wrong">When something goes wrong</h3><p>Fixes, who to contact and how to reach Skillable support.</p></a>
+</div>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

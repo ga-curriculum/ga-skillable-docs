@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing lab instructions | Skillable at GA</title>
+<meta name="description" content="Structure, step-writing and formatting conventions for GA labs, based on Skillable’s guidance.">
+<link rel="icon" href="../assets/img/cog.png">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT THIS PAGE
+  1. Change the words between the tags. Keep the tags themselves (the bits in < >).
+  2. Edit the TITLE block and everything between the two EDIT banners.
+  3. Save the file and refresh your browser.
+  Examples of every kind of block (callout, steps, FAQ, table) are in
+  help/how-to-edit.html.
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Sidebar: built automatically from assets/js/site-config.js. Don't edit. -->
+<div id="site-nav"></div>
+
+<main id="main">
+<div class="page">
+
+  <!-- TITLE: edit the words, keep the tags. The last word turns red automatically. -->
+  <header class="hero black">
+    <img class="fp" src="../assets/img/fp_whorl_white.png" alt="">
+    <p class="kicker"></p>
+    <h1>Writing lab instructions</h1>
+    <p class="dek">Structure, step-writing and formatting conventions for GA labs, based on Skillable’s guidance.</p>
+  </header>
+  <dl class="meta">
+    <div><dt>Audience</dt><dd>LEDs and SMEs</dd></div>
+    <div><dt>Time</dt><dd>10 min read</dd></div>
+  </dl>
+
+  <div class="body">
+    <article class="article">
+
+<!-- ============================================================ -->
+<!-- ======== EDIT THE PAGE CONTENT BELOW THIS LINE ============= -->
+<!-- ============================================================ -->
+
+<h2 id="structure-the-lab">Structure the lab</h2>
+
+<ul>
+<li><strong>One task per page.</strong> End each page with <code>===</code>, which creates a <strong>Next</strong> button. Short pages keep learners oriented and make “which step are you on?” easy to answer.</li>
+<li><strong>Start each page with a Heading 1</strong> (<code>#</code>). Skillable shows it on the navigation buttons, as long as it is <strong>40 characters or fewer</strong>.</li>
+<li><strong>Use Heading 2</strong> (<code>##</code>) for tasks that share a page, and Heading 3 for tasks inside an exercise. If you need Heading 4, restructure.</li>
+<li><strong>Start every heading with a verb</strong>, in sentence case, with no full stop: “Create the API key”, not “API Key Creation.”</li>
+<li><strong>If a heading contains “and”,</strong> you may be combining two tasks. Split it.</li>
+<li><strong>Open each task with one sentence</strong> that says what the learner will achieve and why.</li>
+</ul>
+
+<h2 id="write-the-steps">Write the steps</h2>
+
+<p><strong>Where, what, why.</strong> Say where the learner is, then what to do, then why. Many learners stop reading after the first few words, so put the action first.</p>
+
+<blockquote>
+<p>In the terminal, run the following command to install the project’s dependencies.</p>
+
+</blockquote>
+<ul>
+<li><strong>One sentence per step.</strong> Combine two short actions only if they’re part of the same task.</li>
+<li><strong>Be specific.</strong> Give exact names, values and messages. No “choose any name.”</li>
+<li><strong>Number the steps</strong> and add a check box, so learners can track progress: <code>1. [] step</code>. Progress in TMS is the percentage of these boxes ticked.</li>
+<li><strong>Say “save your changes”</strong> rather than naming a button that might be renamed later.</li>
+</ul>
+
+<h2 id="format-consistently">Format consistently</h2>
+
+<ul>
+<li><strong>Bold is only for things learners click or select</strong>, such as <strong>Save</strong> or <strong>File Explorer</strong>.</li>
+<li><strong>Don’t bold click-to-type or click-to-copy text.</strong> It already stands out.</li>
+<li><strong>Inside callouts, use italics</strong> rather than bold, and avoid quotation marks.</li>
+<li><strong>Use a table for settings</strong> learners must configure, and only list the ones that differ from the defaults.</li>
+<li><strong>Use screenshots sparingly,</strong> cropped to the part of the screen that matters.</li>
+</ul>
+
+<h2 id="ga-conventions">GA conventions</h2>
+
+<p>These are the house rules for GA labs. A few deliberately differ from Skillable’s defaults.</p>
+
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>Convention</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Commands learners should learn go in code blocks, not click-to-type.</strong></td>
+<td>Skillable suggests making everything clickable. For our programs, if everything is click-to-type, learners learn to click, not to code.</td>
+</tr>
+<tr>
+<td><strong>Use click-to-type for setup lines</strong> (paths, long URLs, one-off commands).</td>
+<td>It saves time on things that aren’t the point of the lesson.</td>
+</tr>
+<tr>
+<td><strong>Every page that ends a session has the save alert:</strong> commit, push, check GitHub.</td>
+<td>Lab machines are disposable. GitHub is the backup.</td>
+</tr>
+<tr>
+<td><strong>Spoilers and answers go in expandable hints</strong> (<code>[+Hint]</code>).</td>
+<td>Learners can try first, then reveal.</td>
+</tr>
+<tr>
+<td><strong>The lab instance ID is in a footer</strong> on every page.</td>
+<td>It’s the first thing anyone needs when a learner reports a problem.</td>
+</tr>
+<tr>
+<td><strong>Alert</strong> for anything that loses work. <strong>Knowledge</strong> for background. <strong>Hint</strong> for help.</td>
+<td>Learners learn what each color means.</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>The <a href="../lab-authors/markdown-reference.html#the-essentials-for-every-ga-lab">Markdown reference</a> shows the syntax for each of these.</p>
+
+<h2 id="watch-the-indentation">Watch the indentation</h2>
+
+<p>Most broken-looking labs come down to indentation.</p>
+
+<ul>
+<li><strong>An extra space before <code>1.</code></strong> turns the step into a second-level item.</li>
+<li><strong>A callout, image or code block between numbered steps must be indented</strong> under the step, or the numbering restarts.</li>
+<li><strong>Indent a table</strong> that sits inside a numbered step.</li>
+<li><strong>Limit callouts to one between steps</strong> (two at most), so the steps stay easy to follow.</li>
+</ul>
+
+<h2 id="review-checklist">Review checklist</h2>
+
+<ul class="checklist">
+<li><label><input type="checkbox"><span>One task per page, broken with <code>===</code>, each page starting with a short Heading 1</span></label></li>
+<li><label><input type="checkbox"><span>Every heading starts with a verb</span></label></li>
+<li><label><input type="checkbox"><span>One sentence per step, where-what-why</span></label></li>
+<li><label><input type="checkbox"><span>Commands learners should learn are in code blocks</span></label></li>
+<li><label><input type="checkbox"><span>Every page that ends a session has the save alert</span></label></li>
+<li><label><input type="checkbox"><span>Spoilers are in expandable hints</span></label></li>
+<li><label><input type="checkbox"><span>Every activity has specific feedback for wrong answers</span></label></li>
+<li><label><input type="checkbox"><span>The lab instance ID footer is on every page</span></label></li>
+<li><label><input type="checkbox"><span>Reviewed end to end in a real lab launch after the lab admin loads it</span></label></li>
+</ul>
+
+<p class="doclink"><span>More in Skillable’s docs:</span> <a href="https://docs.skillable.com/docs/instructions-writing-best-practices" target="_blank" rel="noopener">Instructions writing best practices</a></p>
+
+<!-- ============================================================ -->
+<!-- ======== STOP EDITING HERE ================================= -->
+<!-- ============================================================ -->
+
+    </article>
+    <!-- "On this page": built automatically from the headings. Don't edit. -->
+    <aside class="rail" id="toc" aria-label="On this page"></aside>
+  </div>
+
+  <!-- Previous / next and contact: built automatically. Don't edit. -->
+  <div id="page-end"></div>
+
+</div>
+</main>
+
+<script src="../assets/js/site-config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
